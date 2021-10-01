@@ -1,0 +1,90 @@
+
+header {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(194, 193, 134, 0.8);
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kirei {
+  line-height: 50px;
+  padding: 0 30px;
+  color: antiquewhite;
+  background-color: rgba(44, 43, 58, 0.8);
+  transition: all 0.5s;
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 20px;
+  font-family: 'Caveat', cursive;
+}
+
+.login {
+  line-height: 50px;
+  color: antiquewhite;
+  padding: 0 29px;
+  display: inline-block;
+  background-color: rgba(44, 43, 58, 0.8);
+  transition: all 0.5s;
+  margin-right: 25px;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+}
+
+.sign-in {
+  line-height: 50px;
+  color: antiquewhite;
+  padding: 0 25px;
+  display: inline-block;
+  background-color: rgba(44, 43, 58, 0.8);
+  transition: all 0.5s;
+  margin-right: 25px;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+}
+
+.kirei:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.login:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.sign-in:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.top-wrapper {
+  text-align: center;
+  padding: 170px 0 200px;
+}
+
+.top-wrapper h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 40px;
+}
+
+.top-wrapper p {
+  margin-top: 5px
+}
+
+footer {
+  height: 60px;
+  background-color: rgba(236, 235, 222, 0.4);
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  font-family: 'Caveat', cursive;
+  font-size: 23px;
+  line-height: 60px;
+}

@@ -4,12 +4,31 @@
     <title>KireiApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <a href="#" class="kirei">KIREI</a>
+        </div>
+        <div class="header-right">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="sign-in">SignIn</a>
+        </div>
+      </div>
+    </header>
+    
+      <%= yield %>
+
+    <footer>
+      <p>Copyright © KIREI All Rights Reserved.</p>
+    </footer>
+
   </body>
 </html>
