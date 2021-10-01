@@ -1,3 +1,15 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper {
+  background-image: image-url('kireisugi.jpg');
+  width: 100%;
+  height: 500px;
+  background-repeat:  no-repeat;  
+  background-position:top; 
+  background-size:cover;            
+  opacity: 0.7;
+}
+
+
