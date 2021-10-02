@@ -38,7 +38,7 @@ header {
   font-family: 'Caveat', cursive;
 }
 
-.sign-in {
+.sign-up {
   line-height: 50px;
   color: antiquewhite;
   padding: 0 25px;
@@ -58,7 +58,7 @@ header {
   background-color: rgba(112, 12, 12, 0.8);
 }
 
-.sign-in:hover {
+.sign-up:hover {
   background-color: rgba(112, 12, 12, 0.8);
 }
 

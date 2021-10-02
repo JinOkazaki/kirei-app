@@ -1,0 +1,40 @@
+.registrations {
+  background-image: image-url('kireisugi.jpg');
+  width: 100%;
+  height: 550px;
+  background-repeat:  no-repeat;  
+  background-position:top; 
+  background-size:cover;            
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.registration h2 {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 10px;
+  font-family: 'Caveat', cursive;
+}
+
+.field {
+  margin-top: 5px;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.submit-btn {
+  padding: 0 20px;
+  background-color: aliceblue;
+  font-family: 'Caveat', cursive;
+  font-size: 25px;
+}
+
+.gender-select-box {
+  width: 100px;
+}
