@@ -15,11 +15,16 @@
     <header>
       <div class="container">
         <div class="header-left">
-          <a href="#" class="kirei">KIREI</a>
+          <%= link_to "KIREI", root_path, class: "kirei" %>
         </div>
         <div class="header-right">
-            <a href="#" class="login">Login</a>
-            <a href="#" class="sign-in">SignIn</a>
+          <% if user_signed_in? %>
+            <%= link_to current_user.nickname, "#", class: "user-nickname" %>
+            <%= link_to 'LogOut', destroy_user_session_path, method: :delete, class: "logout" %>
+          <% else %>
+            <%= link_to "Login", new_user_session_path, class: "login" %>
+            <%= link_to "SignUp", new_user_registration_path, class: "sign-up" %>
+          <% end %>
         </div>
       </div>
     </header>

@@ -38,7 +38,7 @@ header {
   font-family: 'Caveat', cursive;
 }
 
-.sign-in {
+.sign-up {
   line-height: 50px;
   color: antiquewhite;
   padding: 0 25px;
@@ -50,6 +50,37 @@ header {
   font-family: 'Caveat', cursive;
 }
 
+.logout {
+  line-height: 50px;
+  color: antiquewhite;
+  padding: 0 20px;
+  display: inline-block;
+  background-color: rgba(44, 43, 58, 0.8);
+  transition: all 0.5s;
+  margin-right: 25px;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+}
+
+.user-nickname {
+  line-height: 50px;
+  color: antiquewhite;
+  padding: 0 25px;
+  display: inline-block;
+  background-color: rgba(44, 43, 58, 0.8);
+  transition: all 0.5s;
+  margin-right: 40px;
+  font-size: 25px;
+}
+
+.user-nickname:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.logout:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
 .kirei:hover {
   background-color: rgba(112, 12, 12, 0.8);
 }
@@ -58,7 +89,7 @@ header {
   background-color: rgba(112, 12, 12, 0.8);
 }
 
-.sign-in:hover {
+.sign-up:hover {
   background-color: rgba(112, 12, 12, 0.8);
 }
 

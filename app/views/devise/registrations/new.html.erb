@@ -1,0 +1,46 @@
+<div class="registrations">
+  <div class="registration">
+    <h2>Sign up</h2>
+    <%= form_with model: @user, url: user_registration_path, class: 'new_user', local: true do |f| %>
+
+      
+
+      <div class="registration-field">
+        <%= f.label :ユーザ名 %><br/>
+        <%= f.text_field :nickname, placeholder: "例)太朗、Taro" %>
+      </div>
+
+      <div class="registration-field">
+        <%= f.label :年齢 %><br/>
+        <%= f.text_field :age, placeholder: "例)17" %>
+      </div>
+
+      <div class="registration-field">
+        <span>性別</span><br/>
+        <%=f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select-box"}) %>
+      </div>
+
+      <div class="registration-field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email,placeholder: "例)kirei@kirei.com"%>
+      </div>
+
+      <div class="registration-field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> 文字以上）</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off", placeholder: "半角英数含めて" %>
+      </div>
+
+      <div class="registration-field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"確認用"%>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up", class:"submit-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
