@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
   margin: 50px auto;
-  padding: 150px 0 200px 0;
+  padding: 200px 0 240px 0;
 }
 
 .image-post {
@@ -32,6 +32,10 @@
   margin: 33px 0;
   border-color:silver;
   border-radius: 7px
+}
+
+.category {
+  margin-bottom: 5px;
 }
 
 .post-category {

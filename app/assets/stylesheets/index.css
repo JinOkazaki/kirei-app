@@ -58,14 +58,14 @@ header {
   background-color: rgba(44, 43, 58, 0.8);
   transition: all 0.5s;
   margin-right: 25px;
-  font-size: 25px;
+  font-size: 27px;
   font-family: 'Caveat', cursive;
 }
 
 .user-nickname {
   line-height: 50px;
   color: antiquewhite;
-  padding: 0 25px;
+  padding: 0 30px;
   display: inline-block;
   background-color: rgba(44, 43, 58, 0.8);
   transition: all 0.5s;
