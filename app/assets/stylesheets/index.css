@@ -100,11 +100,12 @@ header {
 
 .top-wrapper h1 {
   font-family: 'Kaushan Script', cursive;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .top-wrapper p {
-  margin-top: 5px
+  margin-top: 9px;
+  font-size: 19px;
 }
 
 .purchase-btn {

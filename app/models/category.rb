@@ -12,7 +12,7 @@ class Category < ActiveHash::Base
     {id: 10, name: 'ヘアケア、スタイリング'},
     {id: 11, name: '美容グッズ、美容家電'},
     {id: 12, name: 'サプリメント、フード'},
-    [id: 13, name: 'その他']
+    {id: 13, name: 'その他'}
   ]
 
   include ActiveHash::Associations
