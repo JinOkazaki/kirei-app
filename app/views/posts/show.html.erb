@@ -1,0 +1,21 @@
+<%= render "shared/header" %>
+
+<div class="posts">  
+  <div class="post">
+    <div class="top-post">
+      <%= link_to "投稿者 #{@post.user.nickname}", user_path(@post.user.id), class:"user-name-post" %>
+      <span><%= @post.created_at.to_s(:datetime_jp) %></span>
+    </div>
+    <div class="main-post">
+      <%= link_to(post_path(@post.id)) do %>
+      <%= image_tag @post.image, class: 'image-main-post' %> 
+      <% end %>
+    </div>
+    <div class="footer-post">
+      <%= link_to @post.user.nickname, user_path(@post.user.id), class:"user-name-post" %>
+      <p><%= @post.caption %></p>
+    </div>
+  </div>
+<div>
+
+<%= render "shared/footer" %>
