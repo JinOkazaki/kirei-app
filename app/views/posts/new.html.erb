@@ -1,3 +1,5 @@
+<%= render "shared/header" %>
+
 <div class="new-post">
   <%= form_with model: @post, class: 'form', local: true do |f| %>
 
@@ -6,12 +8,12 @@
       <%= f.file_field :image, class: "file-post" %>
     </div>
     <div class="caption-post">
-      <%= f.text_area :caption, class:"text-post", placeholder:"投稿するアイテムの口コミを書こう!" ,rows:"5" ,maxlength:"1000" %>
+      <%= f.text_area :caption, class:"text-post", placeholder:"投稿するアイテムの口コミを書こう!" ,rows:"7" ,maxlength:"1000" %>
     </div>
     <div class="category">
       <p>カテゴリー</p>
     </div>
-    <div class="post-category">
+    <div class="category-post">
       <%=f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"collection-post"}) %>
     </div>
     <div class="post-submit">
@@ -19,3 +21,5 @@
     </div>
   <% end %>
 </div>
+
+<%= render "shared/footer" %>
