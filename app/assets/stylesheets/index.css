@@ -2,14 +2,14 @@
 header {
   height: 50px;
   width: 100%;
-  background-color: rgba(194, 193, 134, 0.8);
+  background-color: rgba(44, 43, 58, 0.8);
   opacity: 0.5;
   position: fixed;
   top: 0;
   z-index: 10;
 }
 
-.container {
+.header-top {
   display: flex;
   justify-content: space-between;
 }
@@ -18,7 +18,7 @@ header {
   line-height: 50px;
   padding: 0 30px;
   color: antiquewhite;
-  background-color: rgba(44, 43, 58, 0.8);
+  background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   display: inline-block;
   margin-left: 30px;
@@ -31,7 +31,7 @@ header {
   color: antiquewhite;
   padding: 0 29px;
   display: inline-block;
-  background-color: rgba(44, 43, 58, 0.8);
+  background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 25px;
   font-size: 25px;
@@ -43,7 +43,7 @@ header {
   color: antiquewhite;
   padding: 0 25px;
   display: inline-block;
-  background-color: rgba(44, 43, 58, 0.8);
+  background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 25px;
   font-size: 25px;
@@ -55,19 +55,19 @@ header {
   color: antiquewhite;
   padding: 0 20px;
   display: inline-block;
-  background-color: rgba(44, 43, 58, 0.8);
+  background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 25px;
-  font-size: 25px;
+  font-size: 27px;
   font-family: 'Caveat', cursive;
 }
 
 .user-nickname {
   line-height: 50px;
   color: antiquewhite;
-  padding: 0 25px;
+  padding: 0 30px;
   display: inline-block;
-  background-color: rgba(44, 43, 58, 0.8);
+  background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 40px;
   font-size: 25px;
@@ -100,11 +100,69 @@ header {
 
 .top-wrapper h1 {
   font-family: 'Kaushan Script', cursive;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .top-wrapper p {
-  margin-top: 5px
+  margin-top: 9px;
+  font-size: 19px;
+}
+
+.posts {
+  background-color:rgba(245, 255, 250, 0.3);
+  width: 100%;
+  height: 1000px;
+  padding: 50px 0 60px 0;
+  overflow: scroll;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-post {
+  height: 60px;
+  width: 75%;
+  background-color:rgba(242, 245, 248, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-name-post {
+  position: relative;
+  color: black;
+  font-size: 20px;
+}
+
+.user-name-post:hover {
+  border-bottom: 1px solid black;
+}
+
+.main-post {
+  width: 75%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.image-main-post {
+  width: 80%;
+  height: 650px;
+}
+
+.footer-post {
+  height: 120px;
+  width: 75%;
+  background-color: rgba(245, 245, 248, 0.9);
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+.footer-post p {
+  color: rgb(78, 44, 44);
 }
 
 .purchase-btn {
@@ -133,13 +191,21 @@ header {
 
 .purchase-btn-icon {
   width: 60%;
+  height: calc(100vh - 640px);
+}
+
+.container {
+  position: relative;
 }
 
 footer {
   height: 60px;
+  width: 100%;
   background-color: rgba(236, 235, 222, 0.4);
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 0; 
 }
 
 footer p {

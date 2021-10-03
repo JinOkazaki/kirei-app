@@ -5,6 +5,8 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :gender
 
+  has_many :posts
+  
   with_options presence: true do
     validates :nickname
     validates :age, format: {with: /\A[0-9]{2,3}\z/}
