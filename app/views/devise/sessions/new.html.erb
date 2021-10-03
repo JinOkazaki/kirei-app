@@ -2,7 +2,7 @@
 
 <div class="sessions">
   <div class="session">
-    <h2>Sign in</h2>
+    <h2>Login</h2>
     <%= form_with model: @user, url: user_session_path, class: 'new_user', local: true do |f| %>
 
       <div class="session-field">
@@ -19,7 +19,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Sign in", class:"submit-btn" %>
+        <%= f.submit "Login", class:"submit-btn" %>
       </div>
     <% end %>
   </div>
