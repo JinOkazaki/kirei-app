@@ -111,9 +111,14 @@ header {
 .posts {
   background-color:rgba(245, 255, 250, 0.3);
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   padding: 50px 0 60px 0;
   overflow: scroll;
+}
+
+.mypage-logo {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .post {
@@ -178,7 +183,7 @@ header {
 }
 
 .purchase-btn:hover {
-  background-color: rgba(112, 12, 12, 0.3);
+  background-color: rgba(112, 12, 12, 0.5);
 }
 
 .purchase-btn-text {
