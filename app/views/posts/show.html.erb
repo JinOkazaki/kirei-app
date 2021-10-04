@@ -7,8 +7,18 @@
       <span><%= @post.created_at.to_s(:datetime_jp) %></span>
     </div>
     <div class="main-post">
+      <div class="trash-edit">
+        <div class="trash">
+          <%= link_to(root_path,class:"fa fa-trash fa-4x trash-btn",style: "display: flex;" ) do%>
+          <% end %>
+        </div>
+        <div class="exit">
+          <%= link_to(root_path,class:"fa fa-edit fa-4x edit-btn",style: "display: flex;") do %>
+          <% end %>
+        </div>
+      </div>
       <%= link_to(post_path(@post.id)) do %>
-      <%= image_tag @post.image, class: 'image-main-post' %> 
+        <%= image_tag @post.image, class: 'image-main-post' %> 
       <% end %>
     </div>
     <div class="footer-post">

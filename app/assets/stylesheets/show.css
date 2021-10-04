@@ -1,0 +1,20 @@
+.trash-edit {
+  flex-direction: column;
+  
+}
+
+.fa {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(44, 43, 58, 0.6);
+  opacity: 0.6;
+  transition: all 0.5s;
+  color: whitesmoke;
+}
+
+.fa:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
