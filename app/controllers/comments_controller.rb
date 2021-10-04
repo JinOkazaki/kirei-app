@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
   def create
     Comment.create(comment_params)
-    redirect_to controller: :post, action: :index
+    redirect_to controller: :posts, action: :show
   end
 
   private
