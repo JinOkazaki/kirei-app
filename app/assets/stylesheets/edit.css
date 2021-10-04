@@ -1,0 +1,14 @@
+.edit-page {
+  display: flex;
+  justify-content: center;
+  font-family: 'Caveat', cursive;
+  height: 100px;
+  width: 80%;
+  padding-top: 50px;
+}
+
+.edit-page h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
+}
+

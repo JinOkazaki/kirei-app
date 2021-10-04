@@ -13,7 +13,7 @@
           <% end %>
         </div>
         <div class="exit">
-          <%= link_to(root_path,class:"fa fa-edit fa-4x edit-btn",style: "display: flex;") do %>
+          <%= link_to(edit_post_path(@post.id),class:"fa fa-edit fa-4x edit-btn",style: "display: flex;") do %>
           <% end %>
         </div>
       </div>
@@ -27,5 +27,4 @@
     </div>
   </div>
 <div>
-
 <%= render "shared/footer" %>
