@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: :new
+  before_action :authenticate_user!, only: [:new,:edit]
+  before_action :back_index, only: :edit
 
   def index
     @posts = Post.all.order("created_at DESC")
@@ -34,10 +35,24 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy 
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to user_path(current_user.id)
+  end
   
   private 
 
   def post_params
     params.require(:post).permit(:image,:caption,:category_id).merge(user_id: current_user.id)
   end
+
+  def back_index
+    @post = Post.find(params[:id])
+    if current_user.id != @post.user_id
+      redirect_to root_path
+    end
+  end
+
 end
