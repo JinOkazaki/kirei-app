@@ -9,7 +9,7 @@
           <span><%= post.created_at.to_s(:datetime_jp) %></span>
         </div>
         <div class="main-post">
-          <%= link_to(new_post_path) do %>
+          <%= link_to(post_path(post.id)) do %>
           <%= image_tag post.image, class: 'image-main-post' %> 
           <% end %> 
         </div>
