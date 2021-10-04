@@ -19,14 +19,27 @@
           </div>
         <% end %>
       </div>
-      <%= link_to(post_path(@post.id)) do %>
-        <%= image_tag @post.image, class: 'image-main-post' %> 
+      <%= link_to(post_path(@post.id),class: "image-link") do %>
+        <%= image_tag @post.image, class: 'image-main-show' %> 
       <% end %>
     </div>
-    <div class="footer-post">
+    <div class="footer-show">
       <%= link_to @post.user.nickname, user_path(@post.user.id), class:"user-name-post" %>
-      <p><%= @post.caption %></p>
+      <hr>
+      <p class="caption"><%= @post.caption %></p>
+      <hr>
+      <p><%= "アイテムカテゴリー : #{@post.category.name}"%></p>
     </div>
   </div>
-<div>
+<div class="comments">
+  <div class="comment">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@post, @comment], local: true, class:"comment-form") do |form| %>
+        <%= form.text_area :text, placeholder: "コメントを追加...",class:"comment-area", row: "1" %>
+        <%= form.submit "コメント",class:"comment-submit" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
 <%= render "shared/footer" %>

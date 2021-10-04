@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<div class="posts">
+  <div class="posts">
     <p class="mypage-logo"><%= @nickname %>さんの投稿一覧</p>
     <% @posts.each do |post| %>
       <div class="post">
@@ -9,13 +9,16 @@
           <span><%= post.created_at.to_s(:datetime_jp) %></span>
         </div>
         <div class="main-post">
-          <%= link_to(post_path(post.id)) do %>
+          <%= link_to(post_path(post.id),class:"mypage-link") do %>
           <%= image_tag post.image, class: 'image-main-post' %> 
           <% end %> 
         </div>
         <div class="footer-post">
           <%= link_to post.user.nickname, user_path(post.user.id), class:"user-name-post" %>
+          <hr>
           <p><%= post.caption %></p>
+          <hr>
+          <p><%= "アイテムカテゴリー : #{post.category.name}"%></p>
         </div>
       </div>
     <% end %>
