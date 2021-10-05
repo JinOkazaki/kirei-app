@@ -31,15 +31,31 @@
       <p><%= "アイテムカテゴリー : #{@post.category.name}"%></p>
     </div>
   </div>
+
 <div class="comments">
   <div class="comment">
     <% if user_signed_in? %>
-      <%= form_with(model: [@post, @comment], local: true, class:"comment-form") do |form| %>
-        <%= form.text_area :text, placeholder: "コメントを追加...",class:"comment-area", row: "1" %>
-        <%= form.submit "コメント",class:"comment-submit" %>
+      <%= form_with(model: [@post, @comment], local: true, class:"comment-form",id:"form") do |form| %>
+        <%= form.text_area :text, placeholder: "コメントを追加...",class:"comment-area", row: "1", id:"text" %>
+        <%= form.submit "コメント",class:"comment-submit",id:"submit" %>
       <% end %>
     <% end %>
   </div>
 </div>
+
+<div id="list">
+</div>
+
+<% @comments.each do |comment| %>
+  <div class="comment">
+    <div class="comment-date">
+      投稿日時：<%= comment.created_at.to_s(:datetime_jp) %>
+    </div>
+    <div class="comment-text">
+      <%= comment.text %>
+    </div>
+  </div>
+<% end %>
+
 
 <%= render "shared/footer" %>
