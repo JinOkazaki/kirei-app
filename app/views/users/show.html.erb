@@ -6,7 +6,7 @@
       <div class="post">
         <div class="top-post">
           <%= link_to "投稿者 #{post.user.nickname}", user_path(post.user.id), class:"user-name-post" %>
-          <span><%= post.created_at.to_s(:datetime_jp) %></span>
+          <span><%= l post.created_at %></span>
         </div>
         <div class="main-post">
           <%= link_to(post_path(post.id),class:"mypage-link") do %>

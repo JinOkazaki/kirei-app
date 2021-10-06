@@ -1,9 +1,8 @@
 .trash-edit {
   flex-direction: column;
-  
 }
 
-.fa {
+.trash-btn {
   height: 90px;
   width: 90px;
   border-radius: 50%;
@@ -15,7 +14,35 @@
   color: whitesmoke;
 }
 
-.fa:hover {
+.edit-btn {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(44, 43, 58, 0.6);
+  opacity: 0.6;
+  transition: all 0.5s;
+  color: whitesmoke;
+}
+
+/* .fa {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(44, 43, 58, 0.6);
+  opacity: 0.6;
+  transition: all 0.5s;
+  color: whitesmoke;
+}  */
+
+.trash-btn:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.edit-btn:hover {
   background-color: rgba(112, 12, 12, 0.8);
 }
 
@@ -58,3 +85,21 @@
   opacity: 0.5;
 }
 
+.comment-dates {
+width: 75%;
+margin: 0 auto;
+padding-bottom:10px;
+}
+
+.comment-text span {
+  color: rgb(78, 44, 44);
+  margin-left: 10px
+}
+
+
+
+.trash-btn-comment {
+  float: right;
+  color: deepskyblue;
+  position: relative;
+}

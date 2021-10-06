@@ -4,7 +4,7 @@
   <div class="post">
     <div class="top-post">
       <%= link_to "投稿者 #{@post.user.nickname}", user_path(@post.user.id), class:"user-name-post" %>
-      <span><%= @post.created_at.to_s(:datetime_jp) %></span>
+      <span><%= l @post.created_at %></span>
     </div>
     <div class="main-post">
       <div class="trash-edit">
@@ -43,17 +43,20 @@
   </div>
 </div>
 
+
+
 <div id="list">
 </div>
 
 <% @comments.each do |comment| %>
-  <div class="comment">
-    <div class="comment-date">
-      投稿日時：<%= comment.created_at.to_s(:datetime_jp) %>
+  <div class="comment-dates">
+    <div class="comment-text" id="comment-text">
+      <%= comment.user.nickname %>
+      <span><%= comment.text%><span>
+      <%= link_to(post_comment_path(comment.post.id,comment.id), method: :delete, class:"fa fa-trash fa-1x trash-btn-comment" ) do%>
+      <% end %>
     </div>
-    <div class="comment-text">
-      <%= comment.text %>
-    </div>
+    <hr>
   </div>
 <% end %>
 
