@@ -6,6 +6,7 @@ class User < ApplicationRecord
   belongs_to :gender
 
   has_many :posts
+  has_many :comments
   
   with_options presence: true do
     validates :nickname

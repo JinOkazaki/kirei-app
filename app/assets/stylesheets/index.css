@@ -12,6 +12,7 @@ header {
 .header-top {
   display: flex;
   justify-content: space-between;
+  height: 50px;
 }
 
 .kirei {
@@ -53,16 +54,16 @@ header {
 .logout {
   line-height: 50px;
   color: antiquewhite;
-  padding: 0 20px;
+  padding: 0 30px;
   display: inline-block;
   background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 25px;
-  font-size: 27px;
+  font-size: 20px;
   font-family: 'Caveat', cursive;
 }
 
-.user-nickname {
+.my-page {
   line-height: 50px;
   color: antiquewhite;
   padding: 0 30px;
@@ -70,10 +71,11 @@ header {
   background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 40px;
-  font-size: 25px;
+  font-size: 20px;
+  font-family: 'Caveat', cursive;
 }
 
-.user-nickname:hover {
+.my-page:hover {
   background-color: rgba(112, 12, 12, 0.8);
 }
 
@@ -118,7 +120,11 @@ header {
 
 .mypage-logo {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin: 20px 0;
+}
+
+.mypage-link {
+  height: 550px;
 }
 
 .post {
@@ -134,6 +140,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 
 .user-name-post {
@@ -144,6 +151,7 @@ header {
 
 .user-name-post:hover {
   border-bottom: 1px solid black;
+  padding-bottom: 5px;
 }
 
 .main-post {
@@ -153,20 +161,40 @@ header {
   justify-content: center;
 }
 
+.link-image {
+  height: 550px;
+}
+
 .image-main-post {
   width:  550px;
   height: 550px;
 }
 
-.footer-post {
-  height: 120px;
-  width: 75%;
-  background-color: rgba(245, 245, 248, 0.9);
-  padding: 0 10px;
-  margin-bottom: 50px;
+.image-main-show {
+  width: 400px;
+  height: 400px;
 }
 
-.footer-post p {
+.footer-post {
+ 
+  width: 75%;
+  background-color: rgba(245, 245, 248, 0.9);
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.footer-show {
+
+  width: 75%;
+  background-color: rgba(245, 245, 248, 0.9);
+  padding: 10px;
+}
+
+.caption {
+  color: rgb(78, 44, 44);
+}
+
+.caption {
   color: rgb(78, 44, 44);
 }
 
@@ -196,7 +224,7 @@ header {
 
 .purchase-btn-icon {
   width: 60%;
-  height: calc(100vh - 640px);
+  height: calc(100vh - 630px);
 }
 
 .container {
@@ -217,4 +245,9 @@ footer p {
   font-family: 'Caveat', cursive;
   font-size: 23px;
   line-height: 60px;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
 }
