@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :back_index, only: :edit
 
   def index
-    @posts = Post.all.order("created_at DESC")
+    @posts = Post.all.order("created_at DESC").page(params[:page]).per(2)
   end
 
   def new
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
-    @comments = @post.comments.includes(:user).order("created_at DESC")
+    @comments = @post.comments.includes(:user).order("created_at DESC").page(params[:page]).per(20)
   end
 
   def edit

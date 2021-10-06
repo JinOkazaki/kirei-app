@@ -34,6 +34,10 @@
     <% end %>
   <div>
 
+  <div class="page-nation">
+    <%= paginate @posts %>
+  </div>
+
   <%= render "shared/footer" %>
   
   <%= link_to(new_post_path, class: "purchase-btn") do %>
