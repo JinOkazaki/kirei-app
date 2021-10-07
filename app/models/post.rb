@@ -13,7 +13,4 @@ class Post < ApplicationRecord
     validates :category_id, numericality: {other_than: 1, message: "can't be blank"}
   end
 
-  def liked_by?(user)
-    likes.where(user.id: user.id).exists?
-  end
 end

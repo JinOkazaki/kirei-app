@@ -25,6 +25,8 @@
     </div>
     <div class="footer-show">
       <%= link_to @post.user.nickname, user_path(@post.user.id), class:"user-name-post" %>
+      <%= link_to(post_likes_path(@post.id),class:"fa fa-heart like-btn fa-2x") do %>
+      <% end %>
       <hr>
       <p class="caption"><%= @post.caption %></p>
       <hr>
