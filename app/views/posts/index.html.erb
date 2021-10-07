@@ -25,8 +25,18 @@
         </div>
         <div class="footer-post">
           <%= link_to post.user.nickname, user_path(post.user.id), class:"user-name-post" %>
-          <%= link_to(post_likes_path(post.id),class:"fa fa-heart like-btn fa-2x") do %>
-          <% end %>
+            <% if user_signed_in? %>
+              <% if current_user.liked_by?(post) %>
+                <%= link_to post_likes_path(post.id),method: :delete do %>
+                  <i class="fa fa-heart unlike-btn fa-2x"></i>
+                <% end %>
+              <% else %>
+                <%= link_to post_likes_path(post.id),method: :post do %>
+                  <i class="fa fa-heart like-btn fa-2x"></i>
+                <% end %>
+              <% end %>
+              <%= post.likes.count %>
+            <% end %>
           <hr>
           <p class="caption"><%= post.caption %></p>
           <hr>
@@ -36,8 +46,6 @@
     <% end %>
   <div>
   
-  
-
   <div class="page-nation">
     <%= paginate @posts %>
   </div>
