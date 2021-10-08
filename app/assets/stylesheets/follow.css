@@ -1,0 +1,50 @@
+.follows {
+  padding: 80px 0 60px 0;
+  background-color:rgba(245, 255, 250, 0.3);
+  height: 100vh;
+}
+
+.line {
+  width: 80%;
+}
+
+.follows-log {
+  text-align: center;
+  font-size: 55px;
+  letter-spacing: 3px;
+  font-family: 'Caveat', cursive;
+}
+
+.follows-user {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.follows-user-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 10px;
+}
+
+.user-list {
+  font-size: 20px;
+  color: black;
+}
+
+.user-list:hover {
+  border-bottom: 1px solid black;
+  opacity: 0.5;
+}
+
+.unfollow-btn {
+  background-color: rgba(245, 255, 250, 0.3);
+  border: 1px solid rgba(var(--ca6,219,219,219),1);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.unfollow-btn:hover {
+  opacity: 0.7;
+}
+
