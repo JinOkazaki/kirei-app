@@ -9,6 +9,9 @@
       <p>ようこそKIREIへ</p>
       <p>KIREIは男性特化型コスメ情報共有サービスです</p>
       <p>有益な情報を皆様で共有していきましょう</p>
+      <% unless user_signed_in? %>
+        <p><%= "※各機能を使うためにはログインが必要です"%></p>
+      <% end %>
     </div>
   </div>
   <div class="posts">
@@ -20,23 +23,13 @@
         </div>
         <div class="main-post">
           <%= link_to(post_path(post.id),class:"link-image") do %>
-          <%= image_tag post.image, class: 'image-main-post' %> 
+            <%= image_tag post.image, class: 'image-main-post' %> 
           <% end %>
         </div>
         <div class="footer-post">
-          <%= link_to post.user.nickname, user_path(post.user.id), class:"user-name-post" %>
-            <% if user_signed_in? %>
-              <% if current_user.liked_by?(post) %>
-                <%= link_to post_likes_path(post.id),method: :delete do %>
-                  <i class="fa fa-heart unlike-btn fa-2x"></i>
-                <% end %>
-              <% else %>
-                <%= link_to post_likes_path(post.id),method: :post do %>
-                  <i class="fa fa-heart like-btn fa-2x"></i>
-                <% end %>
-              <% end %>
-              <%= post.likes.count %>
-            <% end %>
+          <div id="likes_buttons_<%= post.id %>">
+            <%= render partial: "likes/like", locals: {post: post} %>
+          </div>
           <hr>
           <p class="caption"><%= post.caption %></p>
           <hr>
@@ -58,3 +51,16 @@
   <% end %>
 
 </div>
+
+<%# <% if current_user.liked_by?(post) %>
+  <%# <%= link_to post_likes_path(post.id),method: :delete,remote: true do %> 
+    <%# <i class="fa fa-heart unlike-btn fa-2x"></i> %>
+  <%# <% end %> 
+<%# <% else %> 
+  <%# <%= link_to post_likes_path(post.id),method: :post,remote: true do %> 
+    <%# <i class="fa fa-heart like-btn fa-2x"></i> %>
+  <%# <% end %> 
+<%# <% end %> 
+<%# <% if post.likes.count != 0 %> 
+  <%# <span><%= "#{post.likes.count}いいね!"</span>  %>
+<%# <% end %>

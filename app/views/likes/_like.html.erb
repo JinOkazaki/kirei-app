@@ -1,0 +1,29 @@
+<% if user_signed_in? %>
+  <%= link_to post.user.nickname, user_path(post.user.id), class:"user-name-post" %>
+  <% if current_user.liked_by?(post) %>
+    <%= link_to post_likes_path(post.id),method: :delete,remote: true do %> 
+      <i class="fa fa-heart unlike-btn fa-2x"></i> 
+    <% end %> 
+  <% else %> 
+    <%= link_to post_likes_path(post.id),method: :post,remote: true do %> 
+     <i class="fa fa-heart like-btn fa-2x"></i> 
+    <% end %> 
+  <% end %> 
+    <% if post.likes.count != 0 %> 
+      <span><%= "#{post.likes.count}いいね!" %></span> 
+    <% end %>
+<% else %>
+  <%= link_to post.user.nickname, user_path(post.user.id), class:"user-name-post" %>
+  <% if post.user.liked_by?(post) %>
+    <%= link_to post_likes_path(post.id),method: :delete,remote: true do %> 
+      <i class="fa fa-heart unlike-btn fa-2x"></i> 
+    <% end %> 
+  <% else %>
+    <%= link_to post_likes_path(post.id),method: :post,remote: true do %> 
+     <i class="fa fa-heart like-btn fa-2x"></i> 
+    <% end %> 
+  <% end %>
+    <% if post.likes.count != 0 %> 
+      <span><%= "#{post.likes.count}いいね!" %></span> 
+    <% end %>
+<% end %>

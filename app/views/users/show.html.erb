@@ -14,19 +14,9 @@
           <% end %> 
         </div>
         <div class="footer-post">
-          <%= link_to post.user.nickname, user_path(post.user.id), class:"user-name-post" %>
-          <% if user_signed_in? %>
-            <% if current_user.liked_by?(post) %>
-              <%= link_to post_likes_path(post.id),method: :delete do %>
-                <i class="fa fa-heart unlike-btn fa-2x"></i>
-              <% end %>
-            <% else %>
-              <%= link_to post_likes_path(post.id),method: :post do %>
-                <i class="fa fa-heart like-btn fa-2x"></i>
-              <% end %>
-            <% end %>
-            <%= post.likes.count %>
-          <% end %>
+          <div id="likes_buttons_<%= post.id %>">
+            <%= render partial: "likes/like", locals: {post: post} %>
+          </div>
           <hr>
           <p><%= post.caption %></p>
           <hr>

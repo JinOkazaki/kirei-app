@@ -253,5 +253,11 @@ hr {
 }
 
 .like-btn {
-  color: #808080;
+ color: black;
+ margin-left: 10px;
+}
+
+.unlike-btn {
+  color: red;
+  margin-left: 10px;
 }
