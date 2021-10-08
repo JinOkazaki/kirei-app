@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :likes
   has_many :relationships, foreign_key: :following_id
   has_many :followings, through: :relationships, source: :follower
-  has_many :reverse_of_relationships: 'Relationship', foreign_key: :follower_id
+  has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: :follower_id
   has_many :followers, through: :reverse_of_relationships, source: :following
 
 
