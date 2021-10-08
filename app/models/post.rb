@@ -4,6 +4,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
   has_one_attached :image
 
   with_options presence: true do
@@ -11,4 +12,5 @@ class Post < ApplicationRecord
     validates :image
     validates :category_id, numericality: {other_than: 1, message: "can't be blank"}
   end
+
 end

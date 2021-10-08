@@ -251,3 +251,13 @@ hr {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #fff;
 }
+
+.like-btn {
+ color: black;
+ margin-left: 10px;
+}
+
+.unlike-btn {
+  color: red;
+  margin-left: 10px;
+}

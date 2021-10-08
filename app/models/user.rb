@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :comments
+  has_many :likes
   
   with_options presence: true do
     validates :nickname
@@ -15,4 +16,7 @@ class User < ApplicationRecord
   end
   validates :password, format: {with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: "is invalid. Include both letters and numbers."}
   
+  def liked_by?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 end

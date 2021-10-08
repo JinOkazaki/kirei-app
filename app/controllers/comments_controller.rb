@@ -2,7 +2,8 @@ class CommentsController < ApplicationController
 
   def create
     comment = Comment.create(comment_params)
-    render json:{comment: comment}
+    user = comment.user
+    render json:{comment: comment, user: user}
   end
 
   def destroy

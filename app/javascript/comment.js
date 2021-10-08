@@ -1,5 +1,6 @@
 function post (){
   const submit = document.getElementById("submit");
+  
   submit.addEventListener("click", (e) => {
     e.preventDefault();
     const form = document.getElementById("form");
@@ -21,13 +22,14 @@ function post (){
       const html = `
       <div class="comment-dates" style="width: 75%; margin: 0 auto; padding-bottom:10px">
         <div class="comment-text">
+          ${user.nickname}
           <span style="color: rgb(78, 44, 44); margin-left:10px">${item.text}</span>
-          <a class="fa fa-trash fa-1x" style="float: right; color: deepskyblue; display: inline"></a>
+          <a href="/posts/${item.post_id}/comments/${item.id}" data-method="delete" class="fa fa-trash fa-1x" style="float: right; color: deepskyblue; display: inline"></a>
         </div>
         <hr>
       </div>
        `;
-      list.insertAdjacentHTML("beforeend",html);
+      list.insertAdjacentHTML("beforebegin",html);
       formText.value = "";
       };
     };

@@ -14,7 +14,9 @@
           <% end %> 
         </div>
         <div class="footer-post">
-          <%= link_to post.user.nickname, user_path(post.user.id), class:"user-name-post" %>
+          <div id="likes_buttons_<%= post.id %>">
+            <%= render partial: "likes/like", locals: {post: post} %>
+          </div>
           <hr>
           <p><%= post.caption %></p>
           <hr>
