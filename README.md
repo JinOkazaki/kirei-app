@@ -10,11 +10,25 @@
 
 
 ### Association
-- has_many: posts
-- has_many: comments
-- has_many: messages
-- has_many: rooms, through: :user_rooms
+- has_many :posts
+- has_many :comments
+- has_many :messages
+- has_many :rooms, through: :user_rooms
+- has_many :relationships, foreign_key: :following_id
+- has_many :followings, through: :relationship, source: :follower
+- has_many :reverse_of_relationships, class_name: "Relationship", foreign_key: :follower_id
+- has_many :followers, through: :reverse_of_relationships, source: :following
 
+## relationshipsテーブル
+
+|Column             |Type   |Options                  |
+|-------------------|-------|-------------------------|
+|following_id       |integer|null: false              |
+|follower_id        |integer|null: false              |
+
+### Association
+- belongs_to :following, class_name: "User"
+- belongs_to :following, class_name: "User"
 
  ## postsテーブル
 
@@ -26,10 +40,10 @@
 
 
 ### Association
-- belongs_to: user
-- has_many: comments
-- has_many: likes
-- has_many: tags, through: :post_tags
+- belongs_to  :user
+- has_many  :comments
+- has_many  :likes
+- has_many  :tags, through: :post_tags
 
 ## commentsテーブル
 
@@ -40,8 +54,8 @@
 |post               |reference|null: false, foreign_key: true|
 
 ### Association
-- belongs_to: user
-- belongs_to: post
+- belongs_to  :user
+- belongs_to  :post
 
 ## likesテーブル
 
