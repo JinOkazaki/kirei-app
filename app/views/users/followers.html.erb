@@ -1,0 +1,25 @@
+<%= render "shared/header" %>
+
+<div class=follows>
+  <h1 class="follows-log">Follower</h1>
+  <hr class="line">
+  <div class="follows-user">
+    <ul>
+      <% @users.each do |user| %>
+      <div class="follows-user-list">
+        <%= link_to user_path(user) do %>
+          <li class="user-list"><%= user.nickname%><li>
+        <% end %>
+        <li>
+          <div id="follows_buttons_<%= user.id %>">
+            <%= render partial: "relationships/relationship", locals: {user: user} %>
+          </div>
+        </li>
+      </div>
+      <hr>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

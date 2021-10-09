@@ -20,16 +20,16 @@ function post (){
       }
       else {
       const html = `
-      <div class="comment-dates" style="width: 75%; margin: 0 auto; padding-bottom:10px">
+      <div class="comment-dates" style="width: 75%; margin: 0 auto; padding-bottom:10px;">
         <div class="comment-text">
-          ${user.nickname}
+          <a href="/users/${user.id}" style="color:black;" onMouseOut="this.style.opacity='1'" onMouseOver="this.style.opacity='0.5'"> ${user.nickname}</a>
           <span style="color: rgb(78, 44, 44); margin-left:10px">${item.text}</span>
           <a href="/posts/${item.post_id}/comments/${item.id}" data-method="delete" class="fa fa-trash fa-1x" style="float: right; color: deepskyblue; display: inline"></a>
         </div>
         <hr>
       </div>
        `;
-      list.insertAdjacentHTML("beforebegin",html);
+      list.insertAdjacentHTML("afterbegin",html);
       formText.value = "";
       };
     };

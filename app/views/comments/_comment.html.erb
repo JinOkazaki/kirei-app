@@ -1,0 +1,6 @@
+<%= link_to comment.user.nickname, user_path(@post.user.id), class:"comment-username" %> 
+<span><%= comment.text%><span>
+<% if user_signed_in? && current_user.id == comment.user.id %>
+  <%= link_to(post_comment_path(comment.post.id,comment.id), method: :delete, class:"fa fa-trash fa-1x trash-btn-comment", remote: true ) do%>
+  <% end %>
+<% end %>
