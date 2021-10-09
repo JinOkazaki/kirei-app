@@ -49,13 +49,13 @@
 </div>
 
 <% @comments.each do |comment| %>
-  <div class="comment-dates">
-    <div class="comment-text" id="comment-text">
-      <div id="trash_btn_<%= comment.id%>">
-        <%= render partial: "comments/comment",locals: {comment: comment} %>
+  <div id="trash_btn_<%= comment.id%>">
+    <div class="comment-dates">
+      <div class="comment-text" id="comment-text">
+          <%= render partial: "comments/comment",locals: {comment: comment} %>
       </div>
+      <hr>
     </div>
-    <hr>
   </div>
 <% end %>
 
@@ -66,17 +66,5 @@
 <%= render "shared/footer" %>
 
 
-<%# <% @comments.each do |comment| %>
-  <%# <div class="comment-dates"> %>
-    <%# <div class="comment-text" id="comment-text"> %>
-      <%# <%= link_to comment.user.nickname, user_path(@post.user.id), class:"comment-username" %> 
-      <%# <span><%= comment.text<span> %>
-      <%# <% if user_signed_in? && current_user.id == comment.user.id %> 
-        <%# <%= link_to(post_comment_path(comment.post.id,comment.id), method: :delete, class:"fa fa-trash fa-1x trash-btn-comment" ) do%> %>
-        <%# <% end %>
-      <%# <% end %> 
-    <%# </div> %>
-    <%# <hr> %>
-  <%# </div> %>
-<%# <% end %>
+
 
