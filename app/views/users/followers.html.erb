@@ -11,17 +11,9 @@
           <li class="user-list"><%= user.nickname%><li>
         <% end %>
         <li>
-          <% if user != current_user %>
-            <% if user.followed_by?(current_user) %>
-              <%=link_to user_relationships_path(user), method: :delete do %>
-                <button type="button" class="unfollow-btn">フォロー中</button>
-              <% end %>
-            <% else %>
-              <%=link_to user_relationships_path(user), method: :post do %>
-                <button type="button" class="follow-btn">フォローする</button>
-              <% end %>
-            <% end %>
-          <% end %>
+          <div id="follows_buttons_<%= user.id %>">
+            <%= render partial: "relationships/relationship", locals: {user: user} %>
+          </div>
         </li>
       </div>
       <hr>

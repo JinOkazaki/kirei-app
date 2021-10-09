@@ -1,0 +1,2 @@
+alert("テスト")
+$('#trash_btn_<%= @comment.id %>').html("<%= j(render partial: 'comments/comment', locals: {comment: @comment}) %>");

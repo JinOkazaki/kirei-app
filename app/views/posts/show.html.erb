@@ -51,19 +51,32 @@
 <% @comments.each do |comment| %>
   <div class="comment-dates">
     <div class="comment-text" id="comment-text">
-      <%= comment.user.nickname %>
-      <span><%= comment.text%><span>
-      <% if user_signed_in? && current_user.id == comment.user.id %>
-        <%= link_to(post_comment_path(comment.post.id,comment.id), method: :delete, class:"fa fa-trash fa-1x trash-btn-comment" ) do%>
-        <% end %>
-      <% end %>
+      <div id="trash_btn_<%= comment.id%>">
+        <%= render partial: "comments/comment",locals: {comment: comment} %>
+      </div>
     </div>
     <hr>
   </div>
 <% end %>
 
 <div class="page-nation">
-    <%= paginate @comments %>
+  <%= paginate @comments %>
 </div>
 
 <%= render "shared/footer" %>
+
+
+<%# <% @comments.each do |comment| %>
+  <%# <div class="comment-dates"> %>
+    <%# <div class="comment-text" id="comment-text"> %>
+      <%# <%= link_to comment.user.nickname, user_path(@post.user.id), class:"comment-username" %> 
+      <%# <span><%= comment.text<span> %>
+      <%# <% if user_signed_in? && current_user.id == comment.user.id %> 
+        <%# <%= link_to(post_comment_path(comment.post.id,comment.id), method: :delete, class:"fa fa-trash fa-1x trash-btn-comment" ) do%> %>
+        <%# <% end %>
+      <%# <% end %> 
+    <%# </div> %>
+    <%# <hr> %>
+  <%# </div> %>
+<%# <% end %>
+

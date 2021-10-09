@@ -40,11 +40,24 @@
   background-color: rgba(245, 255, 250, 0.3);
   border: 1px solid rgba(var(--ca6,219,219,219),1);
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 10px 15px;
   cursor: pointer;
 }
 
 .unfollow-btn:hover {
+  opacity: 0.7;
+}
+
+.follow-btn {
+  background-color: deepskyblue;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.follow-btn:hover {
   opacity: 0.7;
 }
 
