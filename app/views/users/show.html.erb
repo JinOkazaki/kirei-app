@@ -4,6 +4,10 @@
   
   <div class="mypage-posts">
     <div class="mypage-container">
+      <div class="direct-message">
+        <%= link_to(root_path,class:"fa fa-envelope fa-4x message-btn", style: "display: flex;" ) do%>
+        <% end %>
+      </div>
       <h1 class="mypage-logo"><%= "#{@user.nickname}さんのMyPage"%></h1>
       <div class="mypage-follow">
         <div id="follow_button_<%= @user.id %>">

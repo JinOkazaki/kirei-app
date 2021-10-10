@@ -26,11 +26,34 @@
   color: whitesmoke;
 }
 
+.direct-message {
+  position: relative;
+  z-index: 5;
+}
+
+.message-btn {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(44, 43, 58, 0.6);
+  opacity: 0.6;
+  transition: all 0.5s;
+  color: whitesmoke;
+  position: absolute;
+  top: 5px;
+}
+
 .trash-btn:hover {
   background-color: rgba(112, 12, 12, 0.8);
 }
 
 .edit-btn:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.message-btn:hover {
   background-color: rgba(112, 12, 12, 0.8);
 }
 
