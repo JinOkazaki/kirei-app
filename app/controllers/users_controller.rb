@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, only: [:show,:following,:followers]
 
   def show
     @nickname = current_user.nickname
