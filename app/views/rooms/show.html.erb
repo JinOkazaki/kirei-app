@@ -1,31 +1,44 @@
-<h4 class="rooms-title">気になる同士</h4>
-<% @entries.each do |e| %>
-  <div class="user-name">
-  <strong>
-      <a class="rooms-user-link" href="/users/<%= e.user.id %>">
-        <%= e.user.nickname %>さん
-      </a>
-  </strong>
+<%= render "shared/header" %>
+<div class="chat-room">
+  <p class=chat-member>チャットメンバー</p>
+  <div class="chat-user-names">
+    <% @entries.each do |e| %>
+      <div class="chat-user-name" >
+        <%= link_to "・#{e.user.nickname}", user_path(e.user_id) %>
+      </div>
+    <% end %>
   </div>
-<% end %>
-<hr>
-<div class="chats">
-  <div class="chat">
-    <% if @messages.present? %>
-      <% @messages.each do |m| %>
-        <div class="chat-box">
-          <div class="chat-hukidashi"> <strong><%= m.message %></strong> <br>
-            <%= l m.created_at %>
+  <hr>
+  <div class="chats">
+    <div class="chat">
+      <% if @messages.present? %>
+        <% @messages.each do |m| %>
+          <div class="chat-box">
+            <div class="chat-hukidashi">
+              <% if m.user.id == current_user.id %>
+                <div class="current-message-time">
+                  <span class="time"><%= l m.created_at %></span>
+                  <span class="current-message"><%= m.message %></span>
+                </div>
+              <% else %>
+                <div class="message-time">
+                  <span class="message"><%= m.message %></span>
+                  <span class="time"><%= l m.created_at %></span>
+                </div>
+              <% end %>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-  <div class="posts">
-    <%= form_for @message do |f| %>
-      <%= f.text_field :message, placeholder: "メッセージを入力して下さい" , size: 70, class:"form-text-field" %>
+    </div>
+    <hr>
+    <div class="messages-form">
+      <%= form_for @message, class:"message-form" do |f| %>
+        <%= f.text_field :message, placeholder: "メッセージを入力して下さい" , class:"form-text-field" %>
         <%= f.hidden_field :room_id, value: @room.id %>
-          <%= f.submit "投稿",class: 'form-submit'%>
-    <% end %>
+        <%= f.submit "送信",class: 'form-submit'%>
+      <% end %>
+    </div>
   </div>
-</div> %>
+</div>
+<%= render "shared/footer" %>
