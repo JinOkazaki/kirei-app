@@ -5,7 +5,20 @@
   <div class="mypage-posts">
     <div class="mypage-container">
       <div class="direct-message">
-        <%= link_to(root_path,class:"fa fa-envelope fa-4x message-btn", style: "display: flex;" ) do%>
+        <% unless @user.id == current_user.id %>
+          <% if (current_user.followed_by? @user) && (@user.followed_by? current_user)  %>
+          <% if @isRoom == true %>
+            <%= link_to(room_path(@roomId),class:"fa fa-envelope fa-4x message-btn", style: "display: flex;" ) do%>
+            <% end %>
+          <% else %>
+            <%= form_for @room do |f| %>
+              <% fields_for @entry do |e| %>
+                <%= e.hidden_field :user_id, value: @user.id %>
+              <% end %>
+              <%= f.submit "チャットを始める", class:"btn btn-primary btn-lg user-show-chat"%>
+            <% end %>
+          <% end %>
+          <% end %>
         <% end %>
       </div>
       <h1 class="mypage-logo"><%= "#{@user.nickname}さんのMyPage"%></h1>
