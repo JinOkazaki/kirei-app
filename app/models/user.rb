@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_many :followers, through: :reverse_of_relationships, source: :following
   has_many :entries, dependent: :destroy
   has_many :message, dependent: :destroy
-  has_many :room, through: :entries
+  has_many :rooms, through: :entries
 
 
   with_options presence: true do
