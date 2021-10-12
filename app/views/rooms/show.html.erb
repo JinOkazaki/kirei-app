@@ -9,7 +9,6 @@
     <% end %>
   </div>
   <hr>
-  <div class="chats">
     <div class="chat">
       <% if @messages.present? %>
         <% @messages.each do |m| %>
@@ -39,6 +38,5 @@
         <%= f.submit "送信",class: 'form-submit'%>
       <% end %>
     </div>
-  </div>
 </div>
 <%= render "shared/footer" %>

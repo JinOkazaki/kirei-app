@@ -1,3 +1,23 @@
-<% @rooms.each do |room| %>
-  <%= room.nickname %>
-<% end %>
+<%= render "shared/header" %>
+
+<div class=chats>
+  <h1 class="chat-logo">チャット履歴</h1>
+  <hr class="line">
+  <div class="chats-user">
+    <ul>
+      <% @rooms.each do |room| %>
+      <div class="chats-users-list">
+        <%= link_to user_path(room.id) do %>
+          <li class="chat-user-list"><%= room.nickname%><li>
+        <% end %>
+        <li>
+          <%= link_to "チャット", room_path(room.room_ids),class:"user-show-chat" %>
+        </li>
+      </div>
+      <hr>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

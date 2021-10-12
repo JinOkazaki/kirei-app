@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @rooms = room.current_user
+    @rooms = User.joins(:entries).merge(Entry.where(room: current_user.rooms).where.not(user: current_user))
   end
 
   def create
