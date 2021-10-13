@@ -11,11 +11,11 @@
   <hr>
     <div class="chat">
       <% if @messages.present? %>
-        <% @messages.each do |m| %>
-          <div class="chat-box">
+        <div id="message-list">
+          <% @messages.each do |m| %>
             <div class="chat-hukidashi">
-              <% if m.user.id == current_user.id %>
-                <div class="current-message-time">
+              <% if m.user.id == current_user.id %>
+                <div class="current-message-time" >
                   <span class="time"><%= l m.created_at %></span>
                   <span class="current-message"><%= m.message %></span>
                 </div>
@@ -26,14 +26,14 @@
                 </div>
               <% end %>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       <% end %>
     </div>
     <hr>
     <div class="messages-form">
       <%= form_for @message, class:"message-form" do |f| %>
-        <%= f.text_field :message, placeholder: 'メッセージを入力して下さい' , class:"form-text-field" %>
+        <%= f.text_field :message, placeholder: 'メッセージを入力して下さい' , class:"form-text-field", id:"message-form" %>
         <%= f.hidden_field :room_id, value: @room.id %>
         <%= f.submit "送信",class: 'form-submit'%>
       <% end %>
