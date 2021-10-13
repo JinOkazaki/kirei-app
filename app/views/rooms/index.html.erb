@@ -5,13 +5,13 @@
   <hr class="line">
   <div class="chats-user">
     <ul>
-      <% @rooms.each do |room| %>
+      <% @users.each do |user| %>
       <div class="chats-users-list">
-        <%= link_to user_path(room.id) do %>
-          <li class="chat-user-list"><%= room.nickname%><li>
+        <%= link_to user_path(user.id) do %>
+          <li class="chat-user-list"><%= user.nickname%><li>
         <% end %>
         <li>
-          <%= link_to "チャット", room_path(room.room_ids),class:"user-show-chat" %>
+          <%= link_to "チャット", room_path(user.room_ids),class:"user-show-chat" %>
         </li>
       </div>
       <hr>
