@@ -11,12 +11,13 @@
   <hr>
     <div class="chat">
       <% if @messages.present? %>
+        <div id="message-list">
         <% @messages.each do |m| %>
-          <div class="chat-box">
+          <%# <div class="chat-box"> %>
             <div class="chat-hukidashi">
               
               <% if m.user.id == current_user.id %>
-                <div class="current-message-time" id="messages">
+                <div class="current-message-time" >
                   <span class="time"><%= l m.created_at %></span>
                   <span class="current-message"><%= m.message %></span>
                 </div>
@@ -28,8 +29,9 @@
               <% end %>
               
             </div>
-          </div>
+          <%# </div> %>
         <% end %>
+        </div>
       <% end %>
     </div>
     <hr>

@@ -11,9 +11,13 @@ consumer.subscriptions.create("MessageChannel", {
 
   received(data) {
     const html = `
-                <span>${data.message.created_at}</span>
-                <span>${data.message.message}</span>`;
-    const messages = document.getElementById('messages');
+            <div class="current-message-time">
+              <div class="chat-hukidashi">
+                <span class="time">${data.message.created_at}</span>
+                <span class="current-message">${data.message.message}</span>
+              </div>
+            </div>`;
+    const messages = document.getElementById('message-list');
     const newMessage = document.getElementById('message-form');
     messages.insertAdjacentHTML('afterend',html);
     newMessage.value = '';
