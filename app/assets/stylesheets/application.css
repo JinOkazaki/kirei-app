@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 * {
   box-sizing: border-box;
 }
@@ -33,6 +34,7 @@ a {
 }
 
 .pagination>li>a:hover {
+  opacity: 0.6;
 }
 
 .page-nation {

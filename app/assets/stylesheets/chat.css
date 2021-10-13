@@ -1,6 +1,6 @@
-.follows {
+.chats {
   padding: 80px 0 60px 0;
-  background-color:rgba(245, 255, 250, 0.3);
+  background-color:rgba(245, 255, 250, 0.4);
   height: 100vh;
 }
 
@@ -8,28 +8,27 @@
   width: 80%;
 }
 
-.follows-log {
+.chat-logo {
+  font-size: 25px;
   text-align: center;
-  font-size: 55px;
   letter-spacing: 3px;
-  font-family: 'Caveat', cursive;
 }
 
-.follows-user {
+.chats-user {
   width: 70%;
   margin: 0 auto;
   overflow: scroll;
-  background-color: white;
+  background-color:white;
   height: 64vh;
 }
 
-.follows-user-list {
+.chats-users-list {
   display: flex;
   justify-content: space-between;
   margin: 15px 10px;
 }
 
-.user-list {
+.chat-user-list {
   font-size: 20px;
   color: black;
 }
