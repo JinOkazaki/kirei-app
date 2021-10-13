@@ -1,0 +1,93 @@
+.chat-room {
+  padding: 80px 0 60px 0;
+  margin: 0 auto;
+  background-color:rgba(245, 255, 250, 0.3);
+}
+
+.chat-member {
+  text-align: center;
+}
+
+.chat-user-names {
+  display: flex;
+  justify-content: center;
+}
+
+.chat-user-name {
+  display: inline;
+}
+
+.chat-user-name a {
+  color: black;
+}
+
+.chat-user-name:hover {
+  opacity: 0.6;
+}
+
+.chat {
+  width: 50%;
+  height: 420px;
+  margin: 0 auto;
+  background-color: rgba(0, 183, 255, 0.1);
+  overflow: scroll;
+}
+
+
+
+.current-message-time {
+  float: right;
+  margin-right: 5px;
+}
+
+.message-time {
+  margin-left: 5px;
+}
+
+.time {
+  font-size: 5px;
+}
+
+.current-message {
+  font-size: 13px;
+  background-color: lightgreen;
+  border: 1px solid lightgreen;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.message {
+  font-size: 13px;
+  background-color: rgba(192, 192, 192, 0.5);
+  border: 1px solid rgba(192, 192, 192, 0.5);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.messages-form {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.new_message {
+  display: flex;
+  justify-content: center;
+}
+
+.form-text-field {
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+.form-submit {
+  width: 10%;
+  border: none;
+  background-color: white;
+  color: deepskyblue;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  opacity: 0.5;
+}
