@@ -33,15 +33,19 @@
   overflow: scroll;
 }
 
+.chat-hukidashi {
 
+}
 
 .current-message-time {
-  float: right;
+  text-align: right;
   margin-right: 5px;
+  margin-bottom: 3px
 }
 
 .message-time {
   margin-left: 5px;
+  margin-bottom: 3px;
 }
 
 .time {

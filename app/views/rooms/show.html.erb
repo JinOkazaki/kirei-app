@@ -14,8 +14,9 @@
         <% @messages.each do |m| %>
           <div class="chat-box">
             <div class="chat-hukidashi">
-              <% if m.user.id == current_user.id %>
-                <div class="current-message-time">
+              
+              <% if m.user.id == current_user.id %>
+                <div class="current-message-time" id="messages">
                   <span class="time"><%= l m.created_at %></span>
                   <span class="current-message"><%= m.message %></span>
                 </div>
@@ -25,6 +26,7 @@
                   <span class="time"><%= l m.created_at %></span>
                 </div>
               <% end %>
+              
             </div>
           </div>
         <% end %>
@@ -33,7 +35,7 @@
     <hr>
     <div class="messages-form">
       <%= form_for @message, class:"message-form" do |f| %>
-        <%= f.text_field :message, placeholder: 'メッセージを入力して下さい' , class:"form-text-field" %>
+        <%= f.text_field :message, placeholder: 'メッセージを入力して下さい' , class:"form-text-field", id:"message-form" %>
         <%= f.hidden_field :room_id, value: @room.id %>
         <%= f.submit "送信",class: 'form-submit'%>
       <% end %>

@@ -10,6 +10,12 @@ consumer.subscriptions.create("MessageChannel", {
   },
 
   received(data) {
-    // Called when there's incoming data on the websocket for this channel
+    const html = `
+                <span>${data.message.created_at}</span>
+                <span>${data.message.message}</span>`;
+    const messages = document.getElementById('messages');
+    const newMessage = document.getElementById('message-form');
+    messages.insertAdjacentHTML('afterend',html);
+    newMessage.value = '';
   }
 });
