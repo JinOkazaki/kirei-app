@@ -50,6 +50,10 @@ class PostsController < ApplicationController
     category_id = params[:q][:category_id_eq]
     @category = Category.find_by(id: category_id)
   end
+
+  def ranking
+    @posts = Post.includes(:liked_users).sort {|a,b| b.liked_users.size <=> a.liked_users.size}
+  end
   
   private 
   def post_params
