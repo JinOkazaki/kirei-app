@@ -32,11 +32,11 @@
       </div>
       <hr>
       <div class="posts-or-likes">
-        <span class="my-posts">投稿</span>
-        <%= link_to "いいね！", likes_user_path(@user.id), class: "my-likes" %>
+        <%= link_to "投稿", user_path(@user.id), class: "like-posts" %>
+        <span class="like-likes">いいね！</span>
       </div>
     </div>
-    <% @posts.each do |post| %>
+    <% @like_posts.each do |post| %>
       <div class="post">
         <div class="top-post">
           <%= link_to "投稿者 #{post.user.nickname}", user_path(post.user.id), class:"user-name-post" %>
@@ -60,11 +60,10 @@
     <% end %>
   <div>
   
-    <div class="page-nation">
-      <%= paginate @posts %>
-    </div>
+    <%# <div class="page-nation">
+      <%= paginate @like_posts %>
+    <%# </div>  %>
   
     <%= render "shared/footer" %>
 
 </div>
-
