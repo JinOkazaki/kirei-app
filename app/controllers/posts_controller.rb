@@ -52,7 +52,7 @@ class PostsController < ApplicationController
   end
 
   def ranking
-    @posts = Post.includes(:liked_users).sort {|a,b| b.liked_users.size <=> a.liked_users.size}
+    @posts = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
   end
   
   private 

@@ -17,13 +17,25 @@ header {
 
 .kirei {
   line-height: 50px;
-  padding: 0 30px;
+  padding: 0 25px;
   color: antiquewhite;
   background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   display: inline-block;
   margin-left: 30px;
-  font-size: 20px;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+}
+
+.ranking {
+  line-height: 50px;
+  padding: 0 20px;
+  color: antiquewhite;
+  background-color: rgba(194, 193, 134, 0.8);
+  transition: all 0.5s;
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 25px;
   font-family: 'Caveat', cursive;
 }
 
@@ -35,43 +47,43 @@ header {
   background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 25px;
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Caveat', cursive;
 }
 
 .sign-up {
   line-height: 50px;
   color: antiquewhite;
-  padding: 0 25px;
+  padding: 0 20px;
   display: inline-block;
   background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 25px;
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Caveat', cursive;
 }
 
 .logout {
   line-height: 50px;
   color: antiquewhite;
-  padding: 0 30px;
+  padding: 0 20px;
   display: inline-block;
   background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 25px;
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Caveat', cursive;
 }
 
 .my-page {
   line-height: 50px;
   color: antiquewhite;
-  padding: 0 30px;
+  padding: 0 20px;
   display: inline-block;
   background-color: rgba(194, 193, 134, 0.8);
   transition: all 0.5s;
   margin-right: 40px;
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Caveat', cursive;
 }
 
@@ -95,9 +107,13 @@ header {
   background-color: rgba(112, 12, 12, 0.8);
 }
 
+.ranking:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
 .top-wrapper {
   text-align: center;
-  padding: 150px 0 200px;
+  padding: 150px 0 0 0;
 }
 
 .top-wrapper h1 {
@@ -108,14 +124,6 @@ header {
 .top-wrapper p {
   margin-top: 9px;
   font-size: 19px;
-}
-
-.posts {
-  background-color:rgba(245, 255, 250, 0.3);
-  width: 100%;
-  height: 100vh;
-  padding: 50px 0 60px 0;
-  overflow: scroll;
 }
 
 .mypage-container {
@@ -212,7 +220,6 @@ header {
 }
 
 .footer-post {
- 
   width: 75%;
   background-color: rgba(245, 245, 248, 0.9);
   padding: 10px;
@@ -239,10 +246,10 @@ header {
   background-color: rgba(44, 43, 58, 0.4);
   text-align: center;
   border-radius: 50%;
-  bottom: 32px;
+  bottom: 60px;
   right: 32px;
   position: fixed;
-  padding: 15px;
+  padding: 16px;
   transition: all 0.5s;
 }
 
@@ -300,4 +307,34 @@ hr {
 
 #q_category_id_eq {
   height: 28px;
+}
+
+.ranking-icon {
+  position: relative;
+  right: 20px;
+  top: 20px;
+}
+
+.top-ranking-post {
+  height: 60px;
+  width: 68%;
+  background-color:rgba(242, 245, 248, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.main-ranking-post {
+  width: 68%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-ranking-post {
+  width: 68%;
+  background-color: rgba(245, 245, 248, 0.9);
+  padding: 10px;
+  margin-bottom: 30px;
 }
