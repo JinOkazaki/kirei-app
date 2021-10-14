@@ -97,7 +97,7 @@ header {
 
 .top-wrapper {
   text-align: center;
-  padding: 170px 0 200px;
+  padding: 150px 0 200px;
 }
 
 .top-wrapper h1 {
@@ -296,4 +296,8 @@ hr {
 .unlike-btn {
   color: red;
   margin-left: 10px;
+}
+
+#q_category_id_eq {
+  height: 28px;
 }
