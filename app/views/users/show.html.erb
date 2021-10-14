@@ -37,26 +37,7 @@
       </div>
     </div>
     <% @posts.each do |post| %>
-      <div class="post">
-        <div class="top-post">
-          <%= link_to "投稿者 #{post.user.nickname}", user_path(post.user.id), class:"user-name-post" %>
-          <span><%= l post.created_at %></span>
-        </div>
-        <div class="mypage-post">
-          <%= link_to(post_path(post.id),class:"mypage-link") do %>
-          <%= image_tag post.image, class: 'image-main-mypage' %> 
-          <% end %> 
-        </div>
-        <div class="footer-post">
-          <div id="likes_buttons_<%= post.id %>">
-            <%= render partial: "likes/like", locals: {post: post} %>
-          </div>
-          <hr>
-          <p><%= post.caption %></p>
-          <hr>
-          <p><%= "アイテムカテゴリー : #{post.category.name}"%></p>
-        </div>
-      </div>
+      <%= render partial: "shared/mypage", locals: {post: post} %>
     <% end %>
   <div>
   

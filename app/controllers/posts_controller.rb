@@ -50,6 +50,10 @@ class PostsController < ApplicationController
     category_id = params[:q][:category_id_eq]
     @category = Category.find_by(id: category_id)
   end
+
+  def ranking
+    @posts = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
+  end
   
   private 
   def post_params
