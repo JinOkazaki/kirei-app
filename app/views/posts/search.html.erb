@@ -4,9 +4,9 @@
   
   <div class="wrapper">
     <div class="top-wrapper">
-      <%= search_form_for @p, url: search_posts_path do |f| %>
-        <%= f.collection_select :category_id_eq, Category.where.not(id: 1), :id, :name, include_blank: "カテゴリー検索" %> 
-        <%= f.submit "検索" %> 
+      <%= search_form_for @p, url: search_posts_path, class: "search-form" do |f| %>
+        <%= f.collection_select :category_id_eq, Category.where.not(id: 1), :id, :name, include_blank: "カテゴリー検索", class: "search-select" %> 
+        <%= f.submit "検索", class: "searc-submit" %> 
       <% end %>
       <h1>Welcome To KIREI</h1>
       <h1>Make men more beautiful</h1>
@@ -15,7 +15,7 @@
       <p>有益な情報を皆様で共有していきましょう</p>
       <% unless user_signed_in? %>
         <p><%= "※各機能を使うためにはログインが必要です"%></p>
-      <% end %>  
+      <% end %> 
     </div>
   </div>
   <div class="posts">
@@ -34,16 +34,3 @@
   <% end %>
 
 </div>
-
-<%# <% if current_user.liked_by?(post) %>
-  <%# <%= link_to post_likes_path(post.id),method: :delete,remote: true do %> 
-    <%# <i class="fa fa-heart unlike-btn fa-2x"></i> %>
-  <%# <% end %> 
-<%# <% else %> 
-  <%# <%= link_to post_likes_path(post.id),method: :post,remote: true do %> 
-    <%# <i class="fa fa-heart like-btn fa-2x"></i> %>
-  <%# <% end %> 
-<%# <% end %> 
-<%# <% if post.likes.count != 0 %> 
-  <%# <span><%= "#{post.likes.count}いいね!"</span>  %>
-<%# <% end %>
