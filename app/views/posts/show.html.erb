@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<div class="posts">  
+<div class="show-posts">  
   <div class="post">
     <div class="top-post">
       <%= link_to "投稿者 #{@post.user.nickname}", user_path(@post.user.id), class:"user-name-post" %>

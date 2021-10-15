@@ -60,6 +60,24 @@
   padding: 3px;
 }
 
+.mycomment {
+  font-size: 13px;
+  background-color: rgba(192, 192, 192, 0.5);
+  border: 1px solid rgba(192, 192, 192, 0.5);
+  border-radius: 8px;
+  padding: 3px;
+  order: 0;
+}
+
+.order-one {
+  order: 1;
+}
+
+.mycomments {
+  text-align: left;
+  display: flex;
+}
+
 .message {
   font-size: 13px;
   background-color: rgba(192, 192, 192, 0.5);

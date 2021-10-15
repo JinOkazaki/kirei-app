@@ -23,8 +23,9 @@
           <% end %>
           <%# <% end %> 
         <% end %>
+        <span class="mypage-logo"><%= "#{@user.nickname}さんのMyPage" %></span>  
       </div>
-      <h1 class="mypage-logo"><%= "#{@user.nickname}さんのMyPage"%></h1>
+        <%# <span class="mypage-logo"><%= "#{@user.nickname}さんのMyPage"</span> %>
       <div class="mypage-follow">
         <div id="follow_button_<%= @user.id %>">
           <%= render partial: "relationships/followcount", locals: {user: @user} %>
