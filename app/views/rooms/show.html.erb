@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-<div class="chat-room">
+<div class="chat-room" id="chat-room" data-user-id="<%= current_user.id %>">
   <p class=chat-member>チャットメンバー</p>
   <div class="chat-user-names">
     <% @entries.each do |e| %>

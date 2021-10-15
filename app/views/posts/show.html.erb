@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<div class="posts">  
+<div class="show-posts">  
   <div class="post">
     <div class="top-post">
       <%= link_to "投稿者 #{@post.user.nickname}", user_path(@post.user.id), class:"user-name-post" %>
@@ -34,17 +34,20 @@
     </div>
   </div>
 
-<div class="comments">
-  <div class="comment">
-    <% if user_signed_in? %>
-      <%= form_with(model: [@post, @comment], local: true, class:"comment-form",id:"form") do |form| %>
-        <%= form.text_area :text, placeholder: "コメントを追加...",class:"comment-area", row: "1", id:"text" %>
-        <%= form.submit "コメント",class:"comment-submit",id:"submit" %>
+<% if user_signed_in? %>
+  <div class="comments">
+    <div class="comment">
+      <% if user_signed_in? %>
+        <%= form_with(model: [@post, @comment], local: true, class:"comment-form",id:"form") do |form| %>
+          <%= form.text_area :text, placeholder: "コメントを追加...",class:"comment-area", row: "1", id:"text" %>
+          <%= form.submit "コメント",class:"comment-submit",id:"submit" %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
-</div>
-
+<% else %>
+  <p class="no-comment">＊ログイン済みのユーザーのみコメントができます</p>
+<% end %>
 <div id="list">
 </div>
 
