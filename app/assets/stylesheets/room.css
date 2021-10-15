@@ -37,22 +37,13 @@
   display: flex;
 }
 
-.current-message-time {
+.mycomment .current-message-time {
   text-align: right;
   margin-right: 5px;
   margin-bottom: 3px
 }
 
-.message-time {
-  margin-left: 5px;
-  margin-bottom: 3px;
-}
-
-.time {
-  font-size: 5px;
-}
-
-.current-message {
+.mycomment .current-message-time .current-message {
   font-size: 13px;
   background-color: lightgreen;
   border: 1px solid lightgreen;
@@ -60,30 +51,27 @@
   padding: 3px;
 }
 
-.mycomment {
-  font-size: 13px;
-  background-color: rgba(192, 192, 192, 0.5);
-  border: 1px solid rgba(192, 192, 192, 0.5);
-  border-radius: 8px;
-  padding: 3px;
-  order: 0;
+.time {
+  font-size: 5px;
 }
 
-.order-one {
-  order: 1;
-}
-
-.mycomments {
-  text-align: left;
+.another .current-message-time {
+  margin-left: 5px;
+  margin-bottom: 3px;
   display: flex;
+  align-items: baseline;
 }
 
-.message {
+.another .current-message-time .current-message {
   font-size: 13px;
   background-color: rgba(192, 192, 192, 0.5);
-  border: 1px solid rgba(192, 192, 192, 0.5);
   border-radius: 8px;
-  padding: 3px;
+  padding: 1px 2px;
+  margin-right: 5px;
+}
+
+.another .current-message-time .time {
+  order: 1;
 }
 
 .messages-form {

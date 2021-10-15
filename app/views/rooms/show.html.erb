@@ -13,18 +13,18 @@
       <% if @messages.present? %>
         <div id="message-list">
           <% @messages.each do |m| %>
-            <div class="chat-hukidashi">
-              <% if m.user.id == current_user.id %>
-                <div class="current-message-time" >
+            <div class="chat-hukidashi <%= current_user.id == m.user_id ? "mycomment" : "another"%>">
+              <%# <% if m.user.id == current_user.id %> 
+                <div class="current-message-time" > 
                   <span class="time"><%= l m.created_at %></span>
                   <span class="current-message"><%= m.message %></span>
                 </div>
-              <% else %>
-                <div class="message-time">
-                  <span class="message"><%= m.message %></span>
-                  <span class="time"><%= l m.created_at %></span>
-                </div>
-              <% end %>
+              <%# <% else %> 
+                <%# <div class="message-time"> %>
+                  <%# <span class="message"><%= m.message</span>  %>
+                  <%# <span class="time"><%= l m.created_at</span>  %>
+                <%# </div> %>
+              <%# <% end %> 
             </div>
           <% end %>
         </div>
