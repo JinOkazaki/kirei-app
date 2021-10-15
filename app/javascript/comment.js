@@ -34,6 +34,12 @@ function post (){
       };
     };
   });
+  
+  $('.trash-btn-comment').on('click', function() {
+    const commentId = $(this).attr('name');
+    const removeTarget = '#trash_btn_'+commentId;
+    $(removeTarget).remove();
+  });
 };
 
 window.addEventListener('load', post);

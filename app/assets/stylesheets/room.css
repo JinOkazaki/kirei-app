@@ -95,6 +95,17 @@
   display: flex;
   justify-content: center;
 }
+.chat-btn {
+  background-color: deepskyblue;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 16px;
+  cursor: pointer;
+  color: white;
+  display: inline;
+  width: 100px;
+  height: 45px;
+}
 
 .form-text-field {
   width: 90%;
