@@ -20,15 +20,12 @@ consumer.subscriptions.create("MessageChannel", {
         alert("メッセージを入力してください!");
       } else {
         const currentUserId = document.getElementById("chat-room").dataset.userId;
-        const htmlClass = currentUserId == data.message.user_id ? "" : "mycomment"
-        const htmlClassJs = currentUserId == data.message.user_id ? "" : "mycomments"
-        const orderOne = currentUserId == data.message.user_id ? "" : "order-one"
-        // const orderTwo = currentUserId == data.message.user_id ? "" : "order-two"
+        const htmlClass = currentUserId == data.message.user_id ? "mycomment" : "another"
         const html = `
-            <div class="chat-hukidashi">
-              <div class="current-message-time ${htmlClassJs}">
-                <span class="time ${orderOne}">${Y}/${M}/${D} ${h}:${m}</span>
-                <span class="current-message ${htmlClass}">${data.message.message}</span>
+            <div class="chat-hukidashi ${htmlClass}">
+              <div class="current-message-time">
+                <span class="time">${Y}/${M}/${D} ${h}:${m}</span>
+                <span class="current-message">${data.message.message}</span>
               </div>
             </div>`;
         const messages = document.getElementById('message-list');
