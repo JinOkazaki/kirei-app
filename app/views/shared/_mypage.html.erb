@@ -13,7 +13,7 @@
       <%= render partial: "likes/like", locals: {post: post} %>
     </div>
     <hr>
-    <p><%= post.caption %></p>
+    <p><%=safe_join(post.caption.split("\n"),tag(:br))%></p>
     <hr>
     <p><%= "アイテムカテゴリー : #{post.category.name}"%></p>
   </div>

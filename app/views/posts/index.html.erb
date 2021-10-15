@@ -20,7 +20,12 @@
   </div>
   
   <div class="posts">
-    <%= render partial: "shared/post", locals: {post: @posts} %>
+    <% if @posts.present? %>
+      <%= render partial: "shared/post", locals: {post: @posts} %>
+    <% else %>
+      <p class="no-post">まだ投稿がありません</p>
+      <p class="no-post">投稿しよう！</p>
+    <% end %>
   <div>
   
   <div class="page-nation">
