@@ -32,7 +32,7 @@ consumer.subscriptions.create("MessageChannel", {
         const newMessage = document.getElementById('message-form');
         messages.insertAdjacentHTML('beforeend',html);
         newMessage.value = '';
-      };
+     }
   }
 });
 
