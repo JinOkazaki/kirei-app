@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :back_index, only: :edit
   before_action :search_item_category
 
@@ -21,17 +22,14 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user).order("created_at DESC").page(params[:page]).per(2)
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to post_path(@post.id)
     else
@@ -40,7 +38,6 @@ class PostsController < ApplicationController
   end
 
   def destroy 
-    @post = Post.find(params[:id])
     @post.destroy
     redirect_to user_path(current_user.id)
   end
@@ -60,8 +57,11 @@ class PostsController < ApplicationController
     params.require(:post).permit(:image,:caption,:category_id).merge(user_id: current_user.id)
   end
 
-  def back_index
+  def set_post
     @post = Post.find(params[:id])
+  end
+
+  def back_index
     if current_user.id != @post.user_id
       redirect_to root_path
     end
