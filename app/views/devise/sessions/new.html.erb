@@ -1,28 +1,30 @@
-<%= render partial: "shared/header" %>
-
-<div class="sessions">
-  <div class="session">
-    <h2>Login</h2>
-    <%= form_with model: @user, url: user_session_path, class: 'new_user', local: true do |f| %>
-
-      <div class="session-field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email,placeholder: "例)kirei@kirei.com"%>
-      </div>
-
-      <div class="session-field ">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> 文字以上）</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off", placeholder: "半角英数含めて" %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit "Login", class:"submit-btn" %>
-      </div>
-    <% end %>
+<div class="container">
+  <%= render partial: "shared/header" %>
+  
+  <div class="sessions">
+    <div class="session">
+      <h2>Login</h2>
+      <%= form_with model: @user, url: user_session_path, class: 'new_user', local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
+        <div class="session-field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email,placeholder: "例)kirei@kirei.com"%>
+        </div>
+  
+        <div class="session-field ">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> 文字以上）</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off", placeholder: "半角英数含めて" %>
+        </div>
+  
+        <div class="actions">
+          <%= f.submit "Login", class:"submit-btn" %>
+        </div>
+      <% end %>
+    </div>
   </div>
+  
+  <%= render partial: "shared/footer" %>
 </div>
-
-<%= render partial: "shared/footer" %>
