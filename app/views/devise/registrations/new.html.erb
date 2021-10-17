@@ -1,12 +1,11 @@
+<div class="container">
 <%= render partial: "shared/header" %>
 
 <div class="registrations">
+  <h2>Sign up</h2>
   <div class="registration">
-    <h2>Sign up</h2>
     <%= form_with model: @user, url: user_registration_path, class: 'new_user', local: true do |f| %>
-
-      
-
+      <%= render 'shared/error_messages', model: f.object %>
       <div class="registration-field">
         <%= f.label :ユーザ名 %><br/>
         <%= f.text_field :nickname, placeholder: "例)太朗、Taro" %>
@@ -48,3 +47,4 @@
 </div>
 
 <%= render partial: "shared/footer" %>
+</div>

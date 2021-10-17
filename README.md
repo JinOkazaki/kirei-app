@@ -68,25 +68,6 @@
 - belongs_to :user
 - belongs_to :post
 
-## tagsテーブル
-
-|Column             |Type      |Options                       |
-|-------------------|----------|------------------------------|
-|tag_name           |string    |null: false                   |
-
-## Association
-- has_many :posts, through: :post_tags
-
-## post_tagsテーブル
-
-|Column             |Type      |Options                       |
-|-------------------|----------|------------------------------|
-|post               |reference |null: false, foreign_key: true|
-|tag                |reference |null: false, foreign_key: true|
-
-## Association
-- belongs_to :post
-- belongs_to :tag
 
 ## roomsテーブル
 
