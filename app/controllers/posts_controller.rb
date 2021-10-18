@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_action :search_item_category
 
   def index
-    @posts = Post.all.order("created_at DESC").page(params[:page]).per(2)
+    @posts = Post.order("created_at DESC").page(params[:page]).per(2)
   end
 
   def new

@@ -9,8 +9,8 @@
         <% end %>
         <% unless @user.id == current_user.id %>
           <%# <% if (current_user.followed_by? @user) && (@user.followed_by? current_user)  %> 
-          <% if @isRoom == true %>
-            <%= link_to "チャット", room_path(@roomId),class:"user-show-chat" %>
+          <% if @is_room == true %>
+            <%= link_to "チャット", room_path(@room_id),class:"user-show-chat" %>
           <% else %>
             <%= form_for @room do |f| %>
               <%= fields_for @entry do |e| %>
@@ -23,7 +23,6 @@
         <% end %>
         <span class="mypage-logo"><%= "#{@user.nickname}さんのMyPage" %></span>  
       </div>
-        <%# <span class="mypage-logo"><%= "#{@user.nickname}さんのMyPage"</span> %>
       <div class="mypage-follow">
         <div id="follow_button_<%= @user.id %>">
           <%= render partial: "relationships/followcount", locals: {user: @user} %>
