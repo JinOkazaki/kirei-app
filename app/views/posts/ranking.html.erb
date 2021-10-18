@@ -1,83 +1,82 @@
 <%= render "shared/header" %>
 
-<div class=rankings>
-  <div class="rankig-posts">
-    <div class="post">
-    <% if @posts[0].present? %>
-      <div class="top-ranking-post">
-        <p>いいね！数ランキング １位</p>
-        <%= link_to "投稿者 #{@posts[0].user.nickname}", user_path(@posts[0].user.id), class:"user-name-post" %>
-        <span><%= l @posts[0].created_at %></span>
-      </div>
-      <div class="main-ranking-post">
-        <%= image_tag "icon_ranking_s_01.png" , size: "90x90" ,class: "ranking-icon" %>
-        <%= link_to(post_path(@posts[0].id),class:"link-image") do %>
-          <%= image_tag @posts[0].image, class: 'image-main-post' %> 
+  <div class=rankings>
+    <div class="rankig-posts">
+      <div class="post">
+      <% if @posts[0].present? %>
+        <div class="top-ranking-post">
+          <p>いいね！数ランキング １位</p>
+          <%= link_to "投稿者 #{@posts[0].user.nickname}", user_path(@posts[0].user.id), class:"user-name-post" %>
+          <span><%= l @posts[0].created_at %></span>
+        </div>
+        <div class="main-ranking-post">
+          <%= image_tag "icon_ranking_s_01.png" , size: "90x90" ,class: "ranking-icon" %>
+          <%= link_to(post_path(@posts[0].id),class:"link-image") do %>
+            <%= image_tag @posts[0].image, class: 'image-main-post' %> 
+          <% end %>
+        </div>
+        <div class="footer-ranking-post">
+          <div id="likes_buttons_<%= @posts[0].id %>">
+           <%= render partial: "likes/like", locals: {post: @posts[0]} %> 
+          </div>
+          <hr>
+          <p class="caption"><%= @posts[0].caption %></p>
+          <hr>
+          <p><%= "アイテムカテゴリー : #{@posts[0].category.name}"%></p>
+        </div>
+        <% end %>
+
+        <% if @posts[1].present? %>
+        <div class="top-ranking-post">
+          <p>いいね！数ランキング 2位</p>
+          <%= link_to "投稿者 #{@posts[1].user.nickname}", user_path(@posts[1].user.id), class:"user-name-post" %>
+          <span><%= l @posts[0].created_at %></span>
+        </div>
+        <div class="main-ranking-post">
+          <%= image_tag "icon_ranking_s_02.png" , size: "90x90" ,class: "ranking-icon" %>
+          <%= link_to(post_path(@posts[1].id),class:"link-image") do %>
+            <%= image_tag @posts[1].image, class: 'image-main-post' %> 
+          <% end %>
+        </div>
+        <div class="footer-ranking-post">
+          <div id="likes_buttons_<%= @posts[1].id %>">
+           <%= render partial: "likes/like", locals: {post: @posts[1]} %> 
+          </div>
+          <hr>
+          <p class="caption"><%= @posts[1].caption %></p>
+          <hr>
+          <p><%= "アイテムカテゴリー : #{@posts[1].category.name}"%></p>
+        </div>
+        <% end %>
+
+        <% if @posts[2].present? %>
+        <div class="top-ranking-post">
+          <p>いいね！数ランキング 3位</p>
+          <%= link_to "投稿者 #{@posts[2].user.nickname}", user_path(@posts[2].user.id), class:"user-name-post" %>
+          <span><%= l @posts[2].created_at %></span>
+        </div>
+        <div class="main-ranking-post">
+          <%= image_tag "icon_ranking_s_03.png" , size: "90x90" ,class: "ranking-icon" %>
+          <%= link_to(post_path(@posts[2].id),class:"link-image") do %>
+            <%= image_tag @posts[2].image, class: 'image-main-post' %> 
+          <% end %>
+        </div>
+        <div class="footer-ranking-post">
+          <div id="likes_buttons_<%= @posts[2].id %>">
+           <%= render partial: "likes/like", locals: {post: @posts[2]} %> 
+          </div>
+          <hr>
+          <p class="caption"><%= @posts[2].caption %></p>
+          <hr>
+          <p><%= "アイテムカテゴリー : #{@posts[2].category.name}"%></p>
+        </div>
+        <% end %>
+
+        <% unless @posts.present? %>
+          <h1>いいね！された投稿がないのでランキングは表示されません<h1>
         <% end %>
       </div>
-      <div class="footer-ranking-post">
-        <div id="likes_buttons_<%= @posts[0].id %>">
-         <%= render partial: "likes/like", locals: {post: @posts[0]} %> 
-        </div>
-        <hr>
-        <p class="caption"><%= @posts[0].caption %></p>
-        <hr>
-        <p><%= "アイテムカテゴリー : #{@posts[0].category.name}"%></p>
-      </div>
-      <% end %>
-
-      <% if @posts[1].present? %>
-      <div class="top-ranking-post">
-        <p>いいね！数ランキング 2位</p>
-        <%= link_to "投稿者 #{@posts[1].user.nickname}", user_path(@posts[1].user.id), class:"user-name-post" %>
-        <span><%= l @posts[0].created_at %></span>
-      </div>
-      <div class="main-ranking-post">
-        <%= image_tag "icon_ranking_s_02.png" , size: "90x90" ,class: "ranking-icon" %>
-        <%= link_to(post_path(@posts[1].id),class:"link-image") do %>
-          <%= image_tag @posts[1].image, class: 'image-main-post' %> 
-        <% end %>
-      </div>
-      <div class="footer-ranking-post">
-        <div id="likes_buttons_<%= @posts[1].id %>">
-         <%= render partial: "likes/like", locals: {post: @posts[1]} %> 
-        </div>
-        <hr>
-        <p class="caption"><%= @posts[1].caption %></p>
-        <hr>
-        <p><%= "アイテムカテゴリー : #{@posts[1].category.name}"%></p>
-      </div>
-      <% end %>
-
-      <% if @posts[2].present? %>
-      <div class="top-ranking-post">
-        <p>いいね！数ランキング 3位</p>
-        <%= link_to "投稿者 #{@posts[2].user.nickname}", user_path(@posts[2].user.id), class:"user-name-post" %>
-        <span><%= l @posts[2].created_at %></span>
-      </div>
-      <div class="main-ranking-post">
-        <%= image_tag "icon_ranking_s_03.png" , size: "90x90" ,class: "ranking-icon" %>
-        <%= link_to(post_path(@posts[2].id),class:"link-image") do %>
-          <%= image_tag @posts[2].image, class: 'image-main-post' %> 
-        <% end %>
-      </div>
-      <div class="footer-ranking-post">
-        <div id="likes_buttons_<%= @posts[2].id %>">
-         <%= render partial: "likes/like", locals: {post: @posts[2]} %> 
-        </div>
-        <hr>
-        <p class="caption"><%= @posts[2].caption %></p>
-        <hr>
-        <p><%= "アイテムカテゴリー : #{@posts[2].category.name}"%></p>
-      </div>
-      <% end %>
-
-      <% unless @posts.present? %>
-        <h1>いいね！された投稿がないのでランキングは表示されません<h1>
-      <% end %>
-    </div>
-  <div>
-</div>
-
+    <div>
+  </div>
 
 <%= render "shared/footer" %>

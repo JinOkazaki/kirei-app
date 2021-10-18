@@ -1,5 +1,3 @@
-<div class="container">
-
   <%= render "shared/header" %>
   
   <div class="mypage-posts">
@@ -43,13 +41,9 @@
     <% else %>
       <p class="no-mypage-post"><%= "#{@user.nickname}さんの投稿はまだありません" %></p>
     <% end %>
+      <div class="page-nation">
+        <%= paginate @posts %>
+      </div>
+      <%= render "shared/footer" %>
   </div>
-  
-    <div class="page-nation">
-      <%= paginate @posts %>
-    </div>
-  
-    <%= render "shared/footer" %>
-
-</div>
 
