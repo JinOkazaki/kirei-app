@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
 
   def create
     comment = Comment.create(comment_params)
+    @post.create_notification_comment(current_user, @comment.id)
     user = comment.user
     render json:{comment: comment, user: user}
   end
