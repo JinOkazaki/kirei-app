@@ -34,6 +34,7 @@
         <span class="like-likes">いいね！</span>
       </div>
     </div>
+    <div class="mypage-post">
       <% if @like_posts.present? %>
         <% @like_posts.each do |post| %>
           <%= render partial: "shared/mypage", locals: {post: post} %>
@@ -41,8 +42,9 @@
       <% else %>
         <P class="no-mypage-post"><%= "#{@user.nickname}さんがいいね！した投稿はありません" %></P>
       <% end %>
-      <div class="page-nation">
-        <%= paginate @like_posts %>
-      </div> 
-      <%= render "shared/footer" %>
+    </div>
+    <div class="mypage-nation">
+      <%= paginate @like_posts %>
+    </div> 
+    <%= render "shared/footer" %>
   </div>

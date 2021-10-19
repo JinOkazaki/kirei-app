@@ -34,14 +34,16 @@
         <%= link_to "いいね！", likes_user_path(@user.id), class: "my-likes" %>
       </div>
     </div>
-    <% if @posts.present? %>
-      <% @posts.each do |post| %>
-        <%= render partial: "shared/mypage", locals: {post: post} %>
+    <div class="mypage-post">
+      <% if @posts.present? %>
+        <% @posts.each do |post| %>
+          <%= render partial: "shared/mypage", locals: {post: post} %>
+        <% end %>
+      <% else %>
+        <p class="no-mypage-post"><%= "#{@user.nickname}さんの投稿はまだありません" %></p>
       <% end %>
-    <% else %>
-      <p class="no-mypage-post"><%= "#{@user.nickname}さんの投稿はまだありません" %></p>
-    <% end %>
-      <div class="page-nation">
+    </div>
+      <div class="mypage-nation">
         <%= paginate @posts %>
       </div>
       <%= render "shared/footer" %>

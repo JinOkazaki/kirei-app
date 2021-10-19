@@ -2,4 +2,13 @@ ja:
   time:
     formats:
       default: "%Y/%m/%d %H:%M"
-
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        age: 年齢
+        gender_id: 性別
+      post:
+        caption: テキスト
+        image: 画像
+        category_id: カテゴリー

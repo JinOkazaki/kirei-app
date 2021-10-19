@@ -1,0 +1,91 @@
+.mypage-container {
+  width: 75%;
+  margin: 30px auto;
+}
+
+.direct-message {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.message-btn {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(44, 43, 58, 0.6);
+  opacity: 0.6;
+  transition: all 0.5s;
+  color: whitesmoke;
+  z-index: 5;
+  position: absolute;
+  left: 50px;
+}
+
+.message-btn:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.user-show-chat {
+  background-color: deepskyblue;
+  position: absolute;
+  left: 50px;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 16px;
+  cursor: pointer;
+  color: white;
+  display: inline;
+  width: 100px;
+  height: 45px;
+}
+
+.user-show-chat:hover {
+  opacity: 0.7;
+}
+
+.mypage-logo {
+  font-size: 35px;
+  letter-spacing: 3px;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.mypage-follow {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.posts-or-likes {
+  text-align: center;
+  font-size: 20px;
+}
+
+.my-posts {
+  margin-right: 10px;
+}
+
+.my-likes {
+  color: black;
+  opacity: 0.5;
+  margin-left: 10px;
+}
+
+.my-likes:hover {
+  border-bottom: 1px solid black;
+}
+
+.mypage-post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.no-mypage-post {
+  text-align: center;
+  font-size: 30px;
+  opacity: 0.7;
+}

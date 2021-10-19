@@ -37,8 +37,13 @@ a {
   opacity: 0.6;
 }
 
+.mypage-nation {
+  text-align: center;
+}
+
 .page-nation {
   text-align: center;
+  background-color: silver;
 }
 
 .pagination {

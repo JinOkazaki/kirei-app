@@ -1,0 +1,111 @@
+header {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(44, 43, 58, 0.8);
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.kirei {
+  line-height: 50px;
+  padding: 0 25px;
+  color: antiquewhite;
+  background-color: rgba(194, 193, 134, 0.8);
+  transition: all 0.5s;
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+}
+
+.kirei:hover {
+  background-color: rgba(112, 12, 12, 0.7);
+}
+
+.ranking {
+  line-height: 50px;
+  padding: 0 20px;
+  color: antiquewhite;
+  background-color: rgba(194, 193, 134, 0.8);
+  transition: all 0.5s;
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+}
+
+.ranking:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.my-page {
+  line-height: 50px;
+  color: antiquewhite;
+  padding: 0 20px;
+  display: inline-block;
+  background-color: rgba(194, 193, 134, 0.8);
+  transition: all 0.5s;
+  margin-right: 40px;
+  font-size: 30px;
+  font-family: 'Caveat', cursive;
+}
+
+.my-page:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.logout {
+  line-height: 50px;
+  color: antiquewhite;
+  padding: 0 20px;
+  display: inline-block;
+  background-color: rgba(194, 193, 134, 0.8);
+  transition: all 0.5s;
+  margin-right: 25px;
+  font-size: 30px;
+  font-family: 'Caveat', cursive;
+}
+
+.logout:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}
+
+.login {
+  line-height: 50px;
+  color: antiquewhite;
+  padding: 0 29px;
+  display: inline-block;
+  background-color: rgba(194, 193, 134, 0.8);
+  transition: all 0.5s;
+  margin-right: 25px;
+  font-size: 30px;
+  font-family: 'Caveat', cursive;
+}
+
+.login:hover {
+  background-color: rgba(112, 12, 12, 0.7);
+}
+
+.sign-up {
+  line-height: 50px;
+  color: antiquewhite;
+  padding: 0 20px;
+  display: inline-block;
+  background-color: rgba(194, 193, 134, 0.8);
+  transition: all 0.5s;
+  margin-right: 25px;
+  font-size: 30px;
+  font-family: 'Caveat', cursive;
+}
+
+.sign-up:hover {
+  background-color: rgba(112, 12, 12, 0.8);
+}

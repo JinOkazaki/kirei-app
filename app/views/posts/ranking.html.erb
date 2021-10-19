@@ -2,7 +2,7 @@
 
   <div class=rankings>
     <div class="rankig-posts">
-      <div class="post">
+      <div class="ranking-post">
       <% if @posts[0].present? %>
         <div class="top-ranking-post">
           <p>いいね！数ランキング １位</p>
@@ -10,9 +10,9 @@
           <span><%= l @posts[0].created_at %></span>
         </div>
         <div class="main-ranking-post">
-          <%= image_tag "icon_ranking_s_01.png" , size: "90x90" ,class: "ranking-icon" %>
-          <%= link_to(post_path(@posts[0].id),class:"link-image") do %>
-            <%= image_tag @posts[0].image, class: 'image-main-post' %> 
+          <%= image_tag "icon_ranking_s_01.png" , size: "90x90" ,class: "ranking-icon" %> 
+          <%= link_to(post_path(@posts[0].id),class:"link-ranking") do %>
+            <%= image_tag @posts[0].image, class: 'image-ranking-post' %> 
           <% end %>
         </div>
         <div class="footer-ranking-post">
@@ -34,8 +34,8 @@
         </div>
         <div class="main-ranking-post">
           <%= image_tag "icon_ranking_s_02.png" , size: "90x90" ,class: "ranking-icon" %>
-          <%= link_to(post_path(@posts[1].id),class:"link-image") do %>
-            <%= image_tag @posts[1].image, class: 'image-main-post' %> 
+          <%= link_to(post_path(@posts[1].id),class:"link-ranking") do %>
+            <%= image_tag @posts[1].image, class: 'image-ranking-post' %> 
           <% end %>
         </div>
         <div class="footer-ranking-post">
@@ -57,8 +57,8 @@
         </div>
         <div class="main-ranking-post">
           <%= image_tag "icon_ranking_s_03.png" , size: "90x90" ,class: "ranking-icon" %>
-          <%= link_to(post_path(@posts[2].id),class:"link-image") do %>
-            <%= image_tag @posts[2].image, class: 'image-main-post' %> 
+          <%= link_to(post_path(@posts[2].id),class:"link-ranking") do %>
+            <%= image_tag @posts[2].image, class: 'image-ranking-post' %> 
           <% end %>
         </div>
         <div class="footer-ranking-post">

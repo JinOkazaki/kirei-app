@@ -2,12 +2,12 @@
 <%= render "shared/header" %>
 
 <div class="show-posts">  
-  <div class="post">
-    <div class="top-post">
+  <div class="show-post">
+    <div class="top-show">
       <%= link_to "投稿者 #{@post.user.nickname}", user_path(@post.user.id), class:"user-name-post" %>
       <span><%= l @post.created_at %></span>
     </div>
-    <div class="main-post">
+    <div class="main-show">
       <div class="trash-edit">
         <% if user_signed_in? && current_user.id == @post.user_id %>
           <div class="trash">
@@ -20,7 +20,7 @@
           </div>
         <% end %>
       </div>
-      <%= link_to(post_path(@post.id),class: "image-link") do %>
+      <%= link_to(post_path(@post.id),class: "show-link") do %>
         <%= image_tag @post.image, class: 'image-main-show' %> 
       <% end %>
     </div>
