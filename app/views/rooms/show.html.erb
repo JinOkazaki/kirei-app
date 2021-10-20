@@ -28,7 +28,7 @@
     <hr>
     <div class="messages-form">
       <%= form_with model: @message, class: "message-form", id: "form" do |f| %>
-        <%= f.text_field :message, placeholder: 'メッセージを入力して下さい' , class:"form-text-field", id:"message-form" %>
+        <%= f.text_field :message, placeholder: 'メッセージ...' , class:"form-text-field", id:"message-form" %>
         <%= f.hidden_field :room_id, value: @room.id %>
         <%= f.submit "送信",class: 'form-submit', id: "submit" %>
       <% end %>
