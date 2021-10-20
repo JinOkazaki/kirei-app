@@ -11,11 +11,11 @@
       <div class="trash-edit">
         <% if user_signed_in? && current_user.id == @post.user_id %>
           <div class="trash">
-            <%= link_to(post_path(@post.id), method: :delete, class:"fa fa-trash fa-4x trash-btn", style: "display: flex;" ) do%>
+            <%= link_to(post_path(@post.id), method: :delete, class:"fa fa-trash fa-3x trash-btn", style: "display: flex;" ) do%>
             <% end %>
           </div>
           <div class="edit">
-            <%= link_to(edit_post_path(@post.id),class:"fa fa-edit fa-4x edit-btn",style: "display: flex;") do %>
+            <%= link_to(edit_post_path(@post.id),class:"fa fa-edit fa-3x edit-btn",style: "display: flex;") do %>
             <% end %>
           </div>
         <% end %>

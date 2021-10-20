@@ -1,17 +1,4 @@
-.top-wrapper {
-  text-align: center;
-  padding: 150px 0 0 0;
-}
 
-.top-wrapper h1 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 50px;
-}
-
-.top-wrapper p {
-  margin-top: 9px;
-  font-size: 19px;
-}
 
 .post {
   display: flex;

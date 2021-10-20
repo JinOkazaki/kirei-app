@@ -30,6 +30,10 @@ header {
   background-color: rgba(112, 12, 12, 0.7);
 }
 
+.hum-kirei {
+  font-weight: bold;
+}
+
 .hum-kirei:hover {
   opacity: 0.7;
 }
@@ -48,6 +52,10 @@ header {
 
 .ranking:hover {
   background-color: rgba(112, 12, 12, 0.8);
+}
+
+.hum-ranking {
+  font-weight: bold;
 }
 
 .hum-ranking:hover {
@@ -70,6 +78,10 @@ header {
   background-color: rgba(112, 12, 12, 0.8);
 }
 
+.hum-my-page {
+  font-weight: bold;
+}
+
 .hum-my-page:hover {
   opacity: 0.7;
 }
@@ -88,6 +100,10 @@ header {
 
 .logout:hover {
   background-color: rgba(112, 12, 12, 0.8);
+}
+
+.hum-logout {
+  font-weight: bold;
 }
 
 .hum-logout:hover {
@@ -110,6 +126,10 @@ header {
   background-color: rgba(112, 12, 12, 0.7);
 }
 
+.hum-login {
+  font-weight: bold;
+}
+
 .hum-login:hover {
   opacity: 0.7;
 }
@@ -130,8 +150,28 @@ header {
   background-color: rgba(112, 12, 12, 0.8);
 }
 
+.hum-signup {
+  font-weight: bold;
+}
+
 .hum-signup:hover {
   opacity: 0.7;
+}
+
+.top-wrapper {
+  text-align: center;
+  padding: 150px 0 0 0;
+}
+
+.top-wrapper h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 50px;
+}
+
+.top-wrapper p {
+  margin-top: 9px;
+  font-size: 19px;
+  font-weight: bold;
 }
 
 .menu-icon {
@@ -149,7 +189,7 @@ header {
 	left: -100%;
 	width: 180px;
 	height: 300px;
-  background-color: rgb(194, 193, 134);
+  background-color: rgb(179, 177, 84);
 }
 
 .menus {
@@ -190,7 +230,7 @@ header {
   animation-fill-mode: both;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 730px) {
   .kirei {
     display: none;
   }
@@ -214,9 +254,40 @@ header {
   .sign-up {
     display: none;
   }
+
+  .wrapper {
+    height: 480px;
+  }
+
+  .top-wrapper h1 {
+    font-size: 40px;
+  }
+
+  .top-wrapper p {
+    font-size: 16px;
+  }
+
+  @media (max-width: 450px) {
+    .wrapper {
+      height: 400px;
+    }
+
+    .top-wrapper {
+      padding: 120px 0 0 0;
+    }
+
+    .top-wrapper h1 {
+      font-size: 30px;
+    }
+
+    .top-wrapper p {
+      font-size: 12px;
+    }
+  }
+
 }
 
-@media (min-width: 600px) {
+@media (min-width: 729px) {
   .menu-icon {
     display: none;
   }
