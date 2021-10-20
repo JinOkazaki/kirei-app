@@ -6,8 +6,8 @@
       <% if @posts[0].present? %>
         <div class="top-ranking-post">
           <p>いいね！数ランキング １位</p>
-          <%= link_to "投稿者 #{@posts[0].user.nickname}", user_path(@posts[0].user.id), class:"user-name-post" %>
-          <span><%= l @posts[0].created_at %></span>
+          <%= link_to "投稿者 #{@posts[0].user.nickname}", user_path(@posts[0].user.id), class:"user-name-ranking" %>
+          <span class="ranking-time"><%= l @posts[0].created_at %></span>
         </div>
         <div class="main-ranking-post">
           <%= image_tag "icon_ranking_s_01.png" , size: "90x90" ,class: "ranking-icon" %> 
@@ -29,8 +29,8 @@
         <% if @posts[1].present? %>
         <div class="top-ranking-post">
           <p>いいね！数ランキング 2位</p>
-          <%= link_to "投稿者 #{@posts[1].user.nickname}", user_path(@posts[1].user.id), class:"user-name-post" %>
-          <span><%= l @posts[0].created_at %></span>
+          <%= link_to "投稿者 #{@posts[1].user.nickname}", user_path(@posts[1].user.id), class:"user-name-ranking" %>
+          <span class="ranking-time"><%= l @posts[0].created_at %></span>
         </div>
         <div class="main-ranking-post">
           <%= image_tag "icon_ranking_s_02.png" , size: "90x90" ,class: "ranking-icon" %>
@@ -52,8 +52,8 @@
         <% if @posts[2].present? %>
         <div class="top-ranking-post">
           <p>いいね！数ランキング 3位</p>
-          <%= link_to "投稿者 #{@posts[2].user.nickname}", user_path(@posts[2].user.id), class:"user-name-post" %>
-          <span><%= l @posts[2].created_at %></span>
+          <%= link_to "投稿者 #{@posts[2].user.nickname}", user_path(@posts[2].user.id), class:"user-name-ranking" %>
+          <span class="ranking-time"><%= l @posts[2].created_at %></span>
         </div>
         <div class="main-ranking-post">
           <%= image_tag "icon_ranking_s_03.png" , size: "90x90" ,class: "ranking-icon" %>
