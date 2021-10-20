@@ -181,12 +181,12 @@ header {
 .open {
   left: 0;
   margin-top: 50px;
-  animation-name: Animation; /* アニメーション名 */
-  animation-duration: 3s;          /* アニメーションの実行時間(開始〜終了) */
-  animation-timing-function: ease; /* 開始、終了時の動きの速さ */
-  animation-delay: 0;              /* アニメーションの待ち時間 */
-  animation-iteration-count: 1;    /* アニメーションの実行回数 */
-  animation-direction: normal;     /* アニメーションの実行方向 */
+  animation-name: Animation; 
+  animation-duration: 3s;          
+  animation-timing-function: ease; 
+  animation-delay: 0;              
+  animation-iteration-count: 1;    
+  animation-direction: normal;     
   animation-fill-mode: both;
 }
 
