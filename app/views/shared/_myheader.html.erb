@@ -1,0 +1,48 @@
+<%= javascript_pack_tag 'home/hunberger' %>
+<header>  
+  <div class="header-top">
+    <%= image_tag "menu.png" , size: "50x50" ,class: "menu-icon", id: "menu" %>  
+      <div class="menu-list">
+        <ul class="menus">
+          <li><%= link_to "KIREI", root_path, class: "hum-kirei", style: "color: black;" %></li>
+          <li><%= link_to "Ranking", ranking_posts_path, class: "hum-ranking", style: "color: black;" %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "MyPage", user_path(current_user.id), class: "hum-my-page", style: "color: black;" %></li> 
+            <li><%= link_to "LogOut", destroy_user_session_path,  method: :delete, class: "hum-logout", style: "color: black;" %></li>
+          <% else %>
+            <li><%= link_to "Login", new_user_session_path, class: "hum-login", style: "color: black;" %></li>
+            <li><%= link_to "SignUp", new_user_registration_path, class: "hum-signup", style: "color: black;" %></li>
+          <% end %>
+          <% unless @user.id == current_user.id %>
+           <li>
+            <% if (current_user.followed_by? @user) && (@user.followed_by? current_user)  %> 
+              <% if @is_room == true %> 
+                <%= link_to "Chat", room_path(@room_id),class:"hum-user-show-chat", style: "color: black;" %>
+              <% else %> 
+                <%= form_for @room do |f| %>
+                  <%= fields_for @entry do |e| %> 
+                    <%= e.hidden_field :user_id, value: @user.id %> 
+                  <% end %> 
+                  <%= f.submit "Chat", class:"btn btn-primary btn-lg hum-user-show-chat", style: "color: black;" %> 
+                <% end %> 
+              <% end %> 
+            <% end %> 
+            </li>
+          <% end %>
+        </ul>
+      </div> 
+    <div class="header-left">
+      <%= link_to "KIREI", root_path, class: "kirei" %>
+      <%= link_to "Ranking", ranking_posts_path, class: "ranking" %>
+    </div>
+    <div class="header-right">
+      <% if user_signed_in? %>
+        <%= link_to "MyPage", user_path(current_user.id), class: "my-page" %>
+        <%= link_to 'LogOut', destroy_user_session_path, method: :delete, class: "logout" %>
+      <% else %>
+        <%= link_to "Login", new_user_session_path, class: "login" %>
+        <%= link_to "SignUp", new_user_registration_path, class: "sign-up" %>
+      <% end %>
+    </div>
+  </div>
+</header>

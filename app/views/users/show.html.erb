@@ -1,10 +1,10 @@
-  <%= render "shared/header" %>
+  <%= render "shared/myheader" %>
   
   <div class="mypage-posts">
     <div class="mypage-container">
       <div class="direct-message">
         <% if current_user == @user %>
-          <%= link_to(rooms_path,class:"fa fa-envelope fa-4x message-btn",style: "display: flex;" ) do%>
+          <%= link_to(rooms_path,class:"fa fa-envelope fa-3x message-btn",style: "display: flex;" ) do%>
           <% end %>
         <% end %>
         <% unless @user.id == current_user.id %>
