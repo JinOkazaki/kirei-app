@@ -126,21 +126,3 @@ hr {
   text-align: center;
   font-size: 40px;
 }
-
-@media (max-width: 500px) {
-  .kirei {
-    display: none;
-  }
-
-  .my-page {
-    display: none;
-  }
-
-  .ranking {
-    display: none;
-  }
-
-  .logout {
-    display: none;
-  }
-}
