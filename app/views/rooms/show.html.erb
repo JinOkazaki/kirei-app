@@ -19,7 +19,7 @@
               <div class="chat-hukidashi <%= current_user.id == m.user_id ? "mycomment" : "another"%>">
                 <div class="current-message-time" > 
                   <span class="time"><%= l m.created_at %></span>
-                  <span class="current-message"><%= m.message %></span>
+                  <span class="current-message"><%=safe_join(m.message.split("\n"),tag(:br))%></span>
                 </div>
               </div>
             <% end %>
@@ -30,7 +30,7 @@
     <hr>
     <div class="messages-form">
       <%= form_with model: @message, class: "message-form", id: "form" do |f| %>
-        <%= f.text_field :message, placeholder: 'メッセージ...' , class:"form-text-field", id:"message-form" %>
+        <%= f.text_area :message, placeholder: 'メッセージ...' , class:"form-text-field", id:"message-form", maxlength:"100", wrap:"soft" %>
         <%= f.hidden_field :room_id, value: @room.id %>
         <%= f.submit "送信",class: 'form-submit', id: "submit" %>
       <% end %>

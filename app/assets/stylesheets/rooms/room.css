@@ -88,6 +88,8 @@
   width: 90%;
   border: none;
   outline: none;
+  height: 26px;
+  resize: none;
 }
 
 .form-submit {
