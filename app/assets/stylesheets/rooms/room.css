@@ -40,7 +40,8 @@
 .mycomment .current-message-time {
   text-align: right;
   margin-right: 5px;
-  margin-bottom: 3px
+  margin-bottom: 3px;
+  
 }
 
 .mycomment .current-message-time .current-message {
@@ -48,11 +49,14 @@
   background-color: lightgreen;
   border: 1px solid lightgreen;
   border-radius: 8px;
-  width: 30%;
   padding: 1px 2px;
   word-break: break-all;
   display: inline-block;
   text-align: left;
+}
+
+.mycomment .current-message-time .time {
+  vertical-align: top;
 }
 
 .time {
@@ -63,7 +67,6 @@
   margin-left: 5px;
   margin-bottom: 3px;
   display: flex;
-  align-items: baseline;
 }
 
 .another .current-message-time .current-message {
@@ -72,9 +75,7 @@
   border-radius: 8px;
   padding: 1px 2px;
   margin-right: 5px;
-  width: 30%;
   word-break: break-all;
-  display: inline-block;
 }
 
 .another .current-message-time .time {
@@ -113,7 +114,7 @@
 
 @media (max-width: 619px) {
   .messages-form {
-    width: 75%;
+    width: 70%;
   }
   .form-text-field {
     width: 83%;
