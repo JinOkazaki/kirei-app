@@ -16,6 +16,11 @@ consumer.subscriptions.create("MessageChannel", {
       const D = ("00" + date.getDate()).slice(-2)
       const h = ("00" + date.getHours()).slice(-2)
       const m = ("00" + date.getMinutes()).slice(-2)
+      function nl2br(str) {
+        str = str.replace(/\r\n/g, "<br />");
+        str = str.replace(/(\n|\r)/g, "<br />");
+        return str;
+    }
       if (data.message.message == "") {
         alert("メッセージを入力してください!");
       } else {
@@ -25,7 +30,7 @@ consumer.subscriptions.create("MessageChannel", {
             <div class="chat-hukidashi ${htmlClass}">
               <div class="current-message-time">
                 <span class="time">${Y}/${M}/${D} ${h}:${m}</span>
-                <span class="current-message">${data.message.message}</span>
+                <span class="current-message">${nl2br(data.message.message)}</span>
               </div>
             </div>`;
         const messages = document.getElementById('message-list');

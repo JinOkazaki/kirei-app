@@ -267,6 +267,11 @@ header {
     font-size: 16px;
   }
 
+  .breadcrumbs {
+    font-size: 14px;
+  }
+}
+
   @media (max-width: 450px) {
     .wrapper {
       height: 400px;
@@ -285,7 +290,7 @@ header {
     }
   }
 
-}
+
 
 @media (min-width: 729px) {
   .menu-icon {
