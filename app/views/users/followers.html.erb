@@ -1,9 +1,10 @@
 <%= render "shared/header" %>
-
+<% breadcrumb :follower %>
 <div class=follows>
   <h1 class="follows-log">Follower</h1>
   <hr class="line">
   <%= render "shared/follow" %>
 </div>
-
-<%= render "shared/footer" %>
+<div class="fix">
+  <%= render "shared/footer" %>
+</div>
