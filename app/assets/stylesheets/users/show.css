@@ -108,7 +108,7 @@
     height: 67px;
     width: 67px;
     position: absolute;
-    left: 480px;
+    left: 500px;
   }
   .user-show-chat {
     left: 0;
@@ -130,6 +130,12 @@
 @media (max-width: 630px) {
   .user-show-chat {
     left: 400px;
+  }
+  .text-small {
+    font-size: 17px;
+  }
+  .mypage-posts {
+    padding-top: 15px;
   }
 }
 

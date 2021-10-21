@@ -24,6 +24,7 @@
   <div class="page-nation">
     <%= paginate @posts %>
     <%= link_to(new_post_path, class: "purchase-btn") do %>
+      <% breadcrumb :root %>
       <span class="purchase-btn-text">投稿する</span>
       <%= image_tag "post-icon.png" , size: "180x50" ,class: "purchase-btn-icon" %>
     <% end %>
