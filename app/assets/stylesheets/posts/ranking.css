@@ -16,7 +16,7 @@
 }
 
 .user-name-ranking {
-  position: relative;
+  
   color: black;
   font-size: 20px;
 }
@@ -33,22 +33,22 @@
   display: flex;
   justify-content: center;
   box-shadow: 2px 2px 4px black;
+  position: relative;
 }
 
 .ranking-icon {
-  position: relative;
-  right: 20px;
-  top: 20px; 
+  position: absolute;
+  right: 555px;
 }
 
 .link-ranking {
   height: 65vh;
-  width: 65vh;
+  width: 98vh;
 }
 
 .image-ranking-post {
   height: 65vh;
-  width: 65vh;
+  width: 98vh;
 }
 
 .footer-ranking-post {
@@ -61,27 +61,28 @@
 
 @media (max-width: 1024px) {
   .top-ranking-post {
-    width: 80vh;
+    width: 85vh;
   }
   .main-ranking-post {
-    width: 80vh;
+    width: 85vh;
   }
   .footer-ranking-post {
-    width: 80vh;
+    width: 85vh;
   }
   .image-ranking-post {
-    height: 55vh;
-    width: 55vh;
+    width: 83vh;
   }
   .link-ranking {
-    height: 55vh;
-    width: 55vh;
+    width: 83vh;
+  }
+  .ranking-icon {
+    right: 455px;
   }
 }
 
-@media (max-width: 599px) {
-  .top-ranking-post {
-    width: 65vh;
+@media (max-width: 550px) {
+  .footer-ranking-post p {
+    font-size: 13px;
   }
   .top-ranking-post p {
     font-size: 12px;
@@ -92,28 +93,51 @@
   .user-name-ranking {
     font-size: 15px;
   }
-  .main-ranking-post {
-    width: 65vh;
-  }
-  .footer-ranking-post {
-    width: 65vh;
-  }
-  .image-ranking-post {
-    height: 40vh;
-    width: 40vh;
-  }
-  .link-ranking {
-    height: 40vh;
-    width: 40vh;
-  }
-  .ranking-icon {
-    height: 65px;
-    width: 65px;
-  }
-}
-
-@media (max-width: 730px) {
   .footer-ranking-post p {
     font-size: 13px;
   }
+  .top-ranking-post {
+    width: 60vh;
+  }
+  .main-ranking-post {
+    width: 60vh;
+    height: 58vh;
+  }
+  .footer-ranking-post {
+    width: 60vh;
+  }
+  .image-ranking-post {
+    width: 58vh;
+    height: 58vh;
+  }
+  .link-ranking {
+    width: 58vh;
+    height: 58vh;
+  }
+  .ranking-icon {
+    left: 10px;
+    height: 70px;
+    width: 70px;
+  }
 }
+
+@media (max-width: 430px) {
+  .top-ranking-post {
+    width: 40vh;
+  }
+  .main-ranking-post {
+    width: 40vh;
+    height: 50vh;
+  }
+  .footer-ranking-post {
+    width: 40vh;
+  }
+  .image-ranking-post {
+    width: 38vh;
+    height: 50vh;
+  }
+  .link-ranking {
+    width: 38vh;
+    height: 50vh;
+  }
+} 
