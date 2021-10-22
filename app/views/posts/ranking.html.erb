@@ -20,7 +20,9 @@
            <%= render partial: "likes/like", locals: {post: @posts[0]} %> 
           </div>
           <hr>
-          <p class="caption"><%= @posts[0].caption %></p>
+          <div class="caption-area">
+            <p class="caption"><%= @posts[0].caption %></p>
+          </div>
           <hr>
           <p><%= "アイテムカテゴリー : #{@posts[0].category.name}"%></p>
         </div>
@@ -43,7 +45,9 @@
            <%= render partial: "likes/like", locals: {post: @posts[1]} %> 
           </div>
           <hr>
-          <p class="caption"><%= @posts[1].caption %></p>
+          <div class="caption-area">
+            <p class="caption"><%= @posts[1].caption %></p>
+          </div>
           <hr>
           <p><%= "アイテムカテゴリー : #{@posts[1].category.name}"%></p>
         </div>
@@ -66,14 +70,16 @@
            <%= render partial: "likes/like", locals: {post: @posts[2]} %> 
           </div>
           <hr>
-          <p class="caption"><%= @posts[2].caption %></p>
+          <div class="caption-area">
+            <p class="caption"><%= @posts[2].caption %></p>
+          </div>
           <hr>
           <p><%= "アイテムカテゴリー : #{@posts[2].category.name}"%></p>
         </div>
         <% end %>
 
         <% unless @posts.present? %>
-          <h1>いいね！された投稿がないのでランキングは表示されません<h1>
+          <h1 class="no-post">いいね！された投稿がないのでランキングは表示されません<h1>
         <% end %>
       </div>
     <div>

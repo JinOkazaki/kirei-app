@@ -14,7 +14,7 @@
         <%= render partial: "likes/like", locals: {post: post} %>
       </div>
       <hr>
-      <div>
+      <div class="caption-area">
         <p class="caption"><%=safe_join(post.caption.split("\n"),tag(:br))%></p>
       </div>
       <hr>

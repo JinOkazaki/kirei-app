@@ -199,6 +199,12 @@ padding-bottom:10px;
   }
 }
 
+@media (max-width: 730px) {
+  .footer-show p {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 599px) {
   .top-show {
     width: 65vh;

@@ -29,7 +29,9 @@
         <%= render partial: "likes/like",locals: {post: @post} %>
       </div>
       <hr>
-      <p class="caption"><%=safe_join(@post.caption.split("\n"),tag(:br))%></p>
+      <div class="caption-area">
+        <p class="caption"><%=safe_join(@post.caption.split("\n"),tag(:br))%></p>
+      </div>
       <hr>
       <p><%= "アイテムカテゴリー : #{@post.category.name}"%></p>
     </div>
