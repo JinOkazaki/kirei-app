@@ -112,16 +112,16 @@
   opacity: 0.5;
 }
 
-@media (max-width: 619px) {
+@media (max-width: 600px) {
   .messages-form {
     width: 70%;
   }
   .form-text-field {
-    width: 83%;
+    width: 80%;
     
   }
   .form-submit {
-    width: 17%;
+    width: 20%;
     
   }
   .chat {

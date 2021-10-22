@@ -68,4 +68,7 @@
   .chats-users-list {
     margin: 5px 10px;
   }
+  .chat-btn {
+    padding: 5px 5px;
+  }
 }

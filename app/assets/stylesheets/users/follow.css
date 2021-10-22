@@ -69,4 +69,13 @@
   .follows-user-list {
     margin: 5px 10px;
   }
+  .breadcrumbs {
+    font-size: 13px;
+  }
+  .follow-btn {
+    padding: 2px;
+  }
+  .unfollow-btn {
+    padding: 2px;
+  }
 }
