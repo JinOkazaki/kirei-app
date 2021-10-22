@@ -15,7 +15,7 @@
           <%= f.text_field :age, placeholder: "例)17" %>
         </div>
 
-        <div class="registration-field">
+        <div class="gender">
           <span>性別</span><br/>
           <%=f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select-box"}) %>
         </div>

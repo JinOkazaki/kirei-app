@@ -21,10 +21,10 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname
-    validates :age, format: {with: /\A[0-9]{2,3}\z/}
+    validates :age, format: {with: /\A[0-9]{2,3}\z/, message: "は半角数字で入力してください"}
     validates :gender_id, numericality: {other_than: 1, message: "を選んでください"}
   end
-  validates :password, format: {with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: "は半角英数混合で入力してください"}
+  validates :password, format: {with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: "は6文字以上、半角英数混合で入力してください"}
   
   def liked_by?(post)
     self.likes.exists?(post_id: post.id)
