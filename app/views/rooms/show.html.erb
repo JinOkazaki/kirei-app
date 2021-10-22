@@ -1,39 +1,41 @@
 <%= render "shared/header" %>
-<% breadcrumb :mychat %>
-<% breadcrumb :chat %>
-<div class="chat-room" id="chat-room" data-user-id="<%= current_user.id %>">
-  <p class=chat-member>チャットメンバー</p>
-  <div class="chat-user-names">
-    <% @entries.each do |e| %>
-      <div class="chat-user-name" >
-        <%= link_to "・#{e.user.nickname}", user_path(e.user_id) %>
-      </div>
-    <% end %>
-  </div>
-  <hr>
-    <div class="chat">
-      <div id="message-list">
-        <% if @messages.present? %>
-          <div class="message-list">
-            <% @messages.each do |m| %>
-              <div class="chat-hukidashi <%= current_user.id == m.user_id ? "mycomment" : "another"%>">
-                <div class="current-message-time" > 
-                  <span class="time"><%= l m.created_at %></span>
-                  <span class="current-message"><%=safe_join(m.message.split("\n"),tag(:br))%></span>
-                </div>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <hr>
-    <div class="messages-form">
-      <%= form_with model: @message, class: "message-form", id: "form" do |f| %>
-        <%= f.text_area :message, placeholder: 'メッセージ...' , class:"form-text-field", id:"message-form", maxlength:"100", wrap:"soft" %>
-        <%= f.hidden_field :room_id, value: @room.id %>
-        <%= f.submit "送信",class: 'form-submit', id: "submit" %>
+<div id="container">
+  <% breadcrumb :mychat %>
+  <% breadcrumb :chat %>
+  <div class="chat-room" id="chat-room" data-user-id="<%= current_user.id %>">
+    <p class=chat-member>チャットメンバー</p>
+    <div class="chat-user-names">
+      <% @entries.each do |e| %>
+        <div class="chat-user-name" >
+          <%= link_to "・#{e.user.nickname}", user_path(e.user_id) %>
+        </div>
       <% end %>
     </div>
+    <hr>
+      <div class="chat">
+        <div id="message-list">
+          <% if @messages.present? %>
+            <div class="message-list">
+              <% @messages.each do |m| %>
+                <div class="chat-hukidashi <%= current_user.id == m.user_id ? "mycomment" : "another"%>">
+                  <div class="current-message-time" > 
+                    <span class="time"><%= l m.created_at %></span>
+                    <span class="current-message"><%=safe_join(m.message.split("\n"),tag(:br))%></span>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+      <div class="messages-form">
+        <%= form_with model: @message, class: "message-form", id: "form" do |f| %>
+          <%= f.text_area :message, placeholder: 'メッセージ...' , class:"form-text-field", id:"message-form", maxlength:"100", wrap:"soft" %>
+          <%= f.hidden_field :room_id, value: @room.id %>
+          <%= f.submit "送信",class: 'form-submit', id: "submit" %>
+        <% end %>
+      </div>
+  </div>
 </div>
 <%= render "shared/footer" %>

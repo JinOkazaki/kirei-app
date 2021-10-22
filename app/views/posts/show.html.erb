@@ -1,75 +1,77 @@
 <%= javascript_pack_tag 'home/comment' %>
-<%= render "shared/header" %>
-<% breadcrumb :show %>
-<div class="show-posts">  
-  <div class="show-post">
-    <div class="top-show">
-      <%= link_to "投稿者 #{@post.user.nickname}", user_path(@post.user.id), class:"user-name-post" %>
-      <span><%= l @post.created_at %></span>
-    </div>
-    <div class="main-show">
-      <div class="trash-edit">
-        <% if user_signed_in? && current_user.id == @post.user_id %>
-          <div class="trash">
-            <%= link_to(post_path(@post.id), method: :delete, class:"fa fa-trash fa-3x trash-btn", style: "display: flex;" ) do%>
-            <% end %>
-          </div>
-          <div class="edit">
-            <%= link_to(edit_post_path(@post.id),class:"fa fa-edit fa-3x edit-btn",style: "display: flex;") do %>
-            <% end %>
-          </div>
+  <%= render "shared/header" %>
+<div id="container">
+  <% breadcrumb :show %>
+  <div class="show-posts">  
+    <div class="show-post">
+      <div class="top-show">
+        <%= link_to "投稿者 #{@post.user.nickname}", user_path(@post.user.id), class:"user-name-post" %>
+        <span><%= l @post.created_at %></span>
+      </div>
+      <div class="main-show">
+        <div class="trash-edit">
+          <% if user_signed_in? && current_user.id == @post.user_id %>
+            <div class="trash">
+              <%= link_to(post_path(@post.id), method: :delete, class:"fa fa-trash fa-3x trash-btn", style: "display: flex;" ) do%>
+              <% end %>
+            </div>
+            <div class="edit">
+              <%= link_to(edit_post_path(@post.id),class:"fa fa-edit fa-3x edit-btn",style: "display: flex;") do %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+        <%= link_to(post_path(@post.id),class: "show-link") do %>
+          <%= image_tag @post.image, class: 'image-main-show' %> 
         <% end %>
       </div>
-      <%= link_to(post_path(@post.id),class: "show-link") do %>
-        <%= image_tag @post.image, class: 'image-main-show' %> 
-      <% end %>
-    </div>
-    <div class="footer-show">
-      <div id="likes_buttons_<%= @post.id %>">
-        <%= render partial: "likes/like",locals: {post: @post} %>
+      <div class="footer-show">
+        <div id="likes_buttons_<%= @post.id %>">
+          <%= render partial: "likes/like",locals: {post: @post} %>
+        </div>
+        <hr>
+        <div class="caption-area">
+          <p class="caption"><%=safe_join(@post.caption.split("\n"),tag(:br))%></p>
+        </div>
+        <hr>
+        <p><%= "アイテムカテゴリー : #{@post.category.name}"%></p>
       </div>
-      <hr>
-      <div class="caption-area">
-        <p class="caption"><%=safe_join(@post.caption.split("\n"),tag(:br))%></p>
-      </div>
-      <hr>
-      <p><%= "アイテムカテゴリー : #{@post.category.name}"%></p>
     </div>
-  </div>
 
-<% if user_signed_in? %>
-  <div class="comments">
-    <div class="comment">
-      <% if user_signed_in? %>
-        <%= form_with(model: [@post, @comment], local: true, class:"comment-form",id:"form") do |form| %>
-          <%= form.text_area :text, placeholder: "コメントを追加...",class:"comment-area", row: "1", id:"text" %>
-          <%= form.submit "コメント",class:"comment-submit",id:"submit" %>
+  <% if user_signed_in? %>
+    <div class="comments">
+      <div class="comment">
+        <% if user_signed_in? %>
+          <%= form_with(model: [@post, @comment], local: true, class:"comment-form",id:"form") do |form| %>
+            <%= form.text_area :text, placeholder: "コメントを追加...",class:"comment-area", row: "1", id:"text" %>
+            <%= form.submit "コメント",class:"comment-submit",id:"submit" %>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
-  </div>
-<% else %>
-  <p class="no-comment">＊ログイン済みのユーザーのみコメントができます</p>
-<% end %>
-<div id="list">
-</div>
-
-<% @comments.each do |comment| %>
-  <div id="trash_btn_<%= comment.id%>">
-    <div class="comment-dates">
-      <div class="comment-text" id="comment-text">
-          <%= render partial: "comments/comment",locals: {comment: comment} %>
       </div>
-      <hr>
     </div>
+  <% else %>
+    <p class="no-comment">＊ログイン済みのユーザーのみコメントができます</p>
+  <% end %>
+  <div id="list">
   </div>
-<% end %>
 
-<div class="page-nation">
-  <%= paginate @comments %>
+  <% @comments.each do |comment| %>
+    <div id="trash_btn_<%= comment.id%>">
+      <div class="comment-dates">
+        <div class="comment-text" id="comment-text">
+            <%= render partial: "comments/comment",locals: {comment: comment} %>
+        </div>
+        <hr>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="page-nation">
+    <%= paginate @comments %>
+  </div>
+
+  <%= render "shared/footer" %>
 </div>
-
-<%= render "shared/footer" %>
 
 
 

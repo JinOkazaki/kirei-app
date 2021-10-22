@@ -187,19 +187,19 @@ padding-bottom:10px;
 
 @media (max-width: 1024px) {
   .top-show {
-    width: 85vh;
+    width: 75vh;
   }
   .main-show {
-    width: 85vh;
+    width: 75vh;
   }
   .footer-show {
-    width: 85vh;
+    width: 75vh;
   }
   .image-main-show {
-    width: 83vh;
+    width: 73vh;
   }
   .show-link {
-    width: 83vh;
+    width: 73vh;
   }
 }
 
@@ -265,6 +265,5 @@ padding-bottom:10px;
   .trash {
     top: 40vh;
   }
-  
 }
 

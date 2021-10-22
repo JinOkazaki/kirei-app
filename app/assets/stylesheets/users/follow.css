@@ -79,3 +79,9 @@
     padding: 2px;
   }
 }
+
+@media (max-width: 300px) {
+  .breadcrumbs {
+    font-size: 12px;
+  }
+}

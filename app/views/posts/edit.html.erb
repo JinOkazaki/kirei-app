@@ -1,27 +1,29 @@
 <%= render "shared/header" %>
-<% breadcrumb :edit %>
-<div class="new-post">
-  <%= form_with model: @post, class: 'form', local: true do |f| %>
-    <div class="edit-page">
-      <h2>Edit Page</h2>
-    </div>
-    <%= render 'shared/error_messages', model: f.object %>
-    <div class="image-post">
-      <%= f.file_field :image, class: "file-post" %>
-    </div>
-    <div class="caption-post">
-      <%= f.text_area :caption, class:"text-post", placeholder:"投稿するアイテムの口コミを書こう!" ,rows:"7" ,maxlength:"1000" %>
-    </div>
-    <div class="category">
-      <p>カテゴリー</p>
-    </div>
-    <div class="category-post">
-      <%=f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"collection-post"}) %>
-    </div>
-    <div class="post-submit">
-      <%= f.submit 'SEND', class: 'submit' %>
-    </div>
-  <% end %>
-</div>
+  <% breadcrumb :edit %>
+  <div id="container">
+  <div class="new-post">
+    <%= form_with model: @post, class: 'form', local: true do |f| %>
+      <div class="edit-page">
+        <h2>Edit Page</h2>
+      </div>
+      <%= render 'shared/error_messages', model: f.object %>
+      <div class="image-post">
+        <%= f.file_field :image, class: "file-post" %>
+      </div>
+      <div class="caption-post">
+        <%= f.text_area :caption, class:"text-post", placeholder:"投稿するアイテムの口コミを書こう!" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+      <div class="category">
+        <p>カテゴリー</p>
+      </div>
+      <div class="category-post">
+        <%=f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"collection-post"}) %>
+      </div>
+      <div class="post-submit">
+        <%= f.submit 'SEND', class: 'submit' %>
+      </div>
+    <% end %>
+  </div>
 
-<%= render "shared/footer" %>
+  <%= render "shared/footer" %>
+</div>

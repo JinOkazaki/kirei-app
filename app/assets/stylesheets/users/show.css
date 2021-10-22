@@ -113,6 +113,12 @@
   .user-show-chat {
     left: 0;
   }
+  .follow-btn {
+    padding: 5px 10px;
+  }
+  .unfollow-btn {
+    padding: 5px 10px;
+  } 
 }
 
 @media (max-width: 730px) {
@@ -162,17 +168,21 @@
     height: 67px;
     width: 67px;
     position: absolute;
-    left: 290px;
+    left: 270px;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 410px) {
   .message-btn {
-    height: 67px;
-    width: 67px;
+    height: 65px;
+    width: 65px;
     position: absolute;
-    left: 240px;
+    left: 210px;
   }
+}
 
-  
+@media (max-width: 290px) {
+  .message-btn {
+    left: 180px;
+  }
 }

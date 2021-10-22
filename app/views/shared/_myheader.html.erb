@@ -13,22 +13,22 @@
             <li><%= link_to "Login", new_user_session_path, class: "hum-login", style: "color: black;" %></li>
             <li><%= link_to "SignUp", new_user_registration_path, class: "hum-signup", style: "color: black;" %></li>
           <% end %>
-          <% unless @user.id == current_user.id %>
-           <li>
-            <% if (current_user.followed_by? @user) && (@user.followed_by? current_user)  %> 
-              <% if @is_room == true %> 
-                <%= link_to "Chat", room_path(@room_id),class:"hum-user-show-chat", style: "color: black;" %>
-              <% else %> 
-                <%= form_for @room do |f| %>
-                  <%= fields_for @entry do |e| %> 
-                    <%= e.hidden_field :user_id, value: @user.id %> 
+            <li>
+              <% unless @user.id == current_user.id %> 
+                <%# <% if (current_user.followed_by? @user) && (@user.followed_by? current_user)  %> 
+                <% if @is_room == true %> 
+                  <%= link_to "Chat", room_path(@room_id),class:"hum-user-show-chat", style: "color: black;" %>
+                <% else %> 
+                  <%= form_for @room do |f| %>
+                    <%= fields_for @entry do |e| %> 
+                      <%= e.hidden_field :user_id, value: @user.id %> 
+                    <% end %> 
+                    <%= f.submit "Chat", class:"btn btn-primary btn-lg hum-user-show-chat", style: "color: black;" %> 
                   <% end %> 
-                  <%= f.submit "Chat", class:"btn btn-primary btn-lg hum-user-show-chat", style: "color: black;" %> 
                 <% end %> 
-              <% end %> 
-            <% end %> 
+                <%# <% end %> 
+              <% end %>  
             </li>
-          <% end %>
         </ul>
       </div> 
     <div class="header-left">

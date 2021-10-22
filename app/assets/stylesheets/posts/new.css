@@ -9,12 +9,11 @@
 }
 
 .image-post {
-  padding-top: 50px;
+  padding-top: 40px;
+  margin-left: 30px;
 }
 
-.file-post {
-  padding-left: 54px;
-}
+
 
 .text-post {
   resize: none;
@@ -56,4 +55,13 @@
 
 .submit:active {
   border: none;
+}
+
+@media (max-width: 360px) {
+  .text-post {
+    width: 230px;
+  }
+  .collection-post {
+    width: 170px;
+  }
 }

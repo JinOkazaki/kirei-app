@@ -1,24 +1,26 @@
 <%= render "shared/header" %>
+<div id="container">
 <% breadcrumb :room %> 
-<div class=chats>
-  <h1 class="chat-logo">チャット履歴</h1>
-  <hr class="line">
-  <div class="chats-user">
-    <ul>
-      <% @users.each do |user| %>
-      <div class="chats-users-list">
-        <%= link_to user_path(user.id) do %>
-          <li class="chat-user-list"><%= user.nickname%><li>
+  <div class=chats>
+    <h1 class="chat-logo">チャット履歴</h1>
+    <hr class="line">
+    <div class="chats-user">
+      <ul>
+        <% @users.each do |user| %>
+        <div class="chats-users-list">
+          <%= link_to user_path(user.id) do %>
+            <li class="chat-user-list"><%= user.nickname%><li>
+          <% end %>
+          <li>
+            <%= link_to "チャット", room_path(user.room_ids),class:"chat-btn" %>
+          </li>
+        </div>
+        <hr>
         <% end %>
-        <li>
-          <%= link_to "チャット", room_path(user.room_ids),class:"chat-btn" %>
-        </li>
-      </div>
-      <hr>
-      <% end %>
-    </ul>
+      </ul>
+    </div>
   </div>
-</div>
 <div class="fix">
   <%= render "shared/footer" %>
+</div>
 </div>

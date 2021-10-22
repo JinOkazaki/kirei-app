@@ -61,22 +61,22 @@
 
 @media (max-width: 1024px) {
   .top-ranking-post {
-    width: 85vh;
+    width: 75vh;
   }
   .main-ranking-post {
-    width: 85vh;
+    width: 75vh;
   }
   .footer-ranking-post {
-    width: 85vh;
+    width: 75vh;
   }
   .image-ranking-post {
-    width: 83vh;
+    width: 73vh;
   }
   .link-ranking {
-    width: 83vh;
+    width: 73vh;
   }
   .ranking-icon {
-    right: 455px;
+    right: 410px;
   }
 }
 
@@ -140,4 +140,21 @@
     width: 38vh;
     height: 50vh;
   }
+  .ranking-icon {
+    height: 55px;
+    width: 55px;
+  }
 } 
+
+@media (max-height: 1024px) {
+  .ranking-icon {
+    left: 30px;
+  }
+}
+
+@media (max-height: 600px) {
+  .ranking-icon {
+    left: 20px;
+  }
+}
+

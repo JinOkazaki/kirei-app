@@ -10,7 +10,7 @@
 
 .top-post {
   height: 60px;
-  width: 57vh;
+  width: 56vh;
   background-color:rgba(242, 245, 248, 0.9);
   display: flex;
   justify-content: space-between;
@@ -31,24 +31,24 @@
 }
 
 .main-post {
-  width: 57vh;
+  width: 56vh;
   background-color: white;
   display: flex;
   justify-content: center;
 }
 
 .image-main-post {
-  width:  49vh;
+  width:  48vh;
   height: 49vh;
 }
 
 .link-image {
-  width: 49vh;
+  width: 48vh;
   height: 49vh;
 }
 
 .footer-post {
-  width: 57vh;
+  width: 56vh;
   background-color: rgba(245, 245, 248, 0.9);
   padding: 10px;
 }

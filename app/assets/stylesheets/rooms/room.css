@@ -1,7 +1,7 @@
 .chat-room {
   padding: 50px 0 30px 0;
   margin: 0 auto;
-  background-color: rgba(192, 192, 192, 0.293)
+  background-color: rgba(192, 192, 192, 0.293);
 }
 
 .chat-member {
@@ -126,5 +126,17 @@
   }
   .chat {
     width: 70%;
+  }
+}
+
+@media (max-width: 350px) {
+  .message-form {
+    width: 85%;
+  }
+  .form-text-field {
+    width: 95%;
+  }
+  .current-message {
+    font-size: 5px;
   }
 }

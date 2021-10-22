@@ -1,10 +1,12 @@
 <%= render "shared/header" %>
-<% breadcrumb :follower %>
-<div class=follows>
-  <h1 class="follows-log">Follower</h1>
-  <hr class="line">
-  <%= render "shared/follow" %>
-</div>
-<div class="fix">
-  <%= render "shared/footer" %>
+<div id="container">
+  <% breadcrumb :follower %>
+  <div class=follows>
+    <h1 class="follows-log">Follower</h1>
+    <hr class="line">
+    <%= render "shared/follow" %>
+  </div>
+  <div class="fix">
+    <%= render "shared/footer" %>
+  </div>
 </div>
