@@ -112,4 +112,8 @@ Rails.application.configure do
   ActionCable.server.config.disable_request_forgery_protection = true
   config.action_cable.url = "wss://【Herokukirei-app】.herokuapp.com/cable" 
   config.action_cable.allowed_request_origins = ['https://【Herokukirei-app】.herokuapp.com', 'http://【Herokukirei-app】.herokuapp.com']
+
+  ActionCable.server.config.disable_request_forgery_protection = true
+  config.action_cable.url = "ws://35.76.224.126/cable" 
+  config.action_cable.allowed_request_origins = ['http://35.76.224.126']
 end
