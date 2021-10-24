@@ -48,13 +48,16 @@
           <% end %>
         <% end %>
       </div>
+      <% if @comments.present? %>
+        <p class="comment-count"><%= "コメント#{@comments.count}件全てを表示" %></p>
+      <% end %>
     </div>
   <% else %>
     <p class="no-comment">＊ログイン済みのユーザーのみコメントができます</p>
   <% end %>
   <div id="list">
   </div>
-
+<div class="comments-area">
   <% @comments.each do |comment| %>
     <div id="trash_btn_<%= comment.id%>">
       <div class="comment-dates">
@@ -65,13 +68,9 @@
       </div>
     </div>
   <% end %>
-
-  <div class="page-nation">
-    <%= paginate @comments %>
-  </div>
-
-  <%= render "shared/footer" %>
 </div>
+</div>
+<%= render "shared/footer" %>
 
 
 

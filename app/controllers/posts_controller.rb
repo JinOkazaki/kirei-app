@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = @post.comments.includes(:user).order("created_at DESC").page(params[:page]).per(2)
+    @comments = @post.comments.includes(:user).order("created_at DESC")
   end
 
   def edit

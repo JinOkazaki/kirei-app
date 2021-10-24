@@ -20,7 +20,7 @@ function post (){
       }
       else {
       const html = `
-      <div class="comment-dates" style="width: 75%; margin: 0 auto; padding-bottom:10px;">
+      <div class="comment-dates" style= "width: 75%; margin: 0 auto; padding-bottom:10px;">
         <div class="comment-text">
           <a href="/users/${user.id}" style="color:black;" onMouseOut="this.style.opacity='1'" onMouseOver="this.style.opacity='0.5'"> ${user.nickname}</a>
           <span style="color: rgb(78, 44, 44); margin-left:10px">${item.text}</span>
@@ -40,6 +40,13 @@ function post (){
     const removeTarget = '#trash_btn_'+commentId;
     $(removeTarget).remove();
   });
+
+  $('.comment-count').on('click', function(){
+    $('.comments-area').toggleClass('comments-area-open');
+  });
+  
 };
 
 window.addEventListener('load', post);
+
+

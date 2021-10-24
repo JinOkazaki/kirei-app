@@ -122,9 +122,9 @@
 }
 
 .comment-dates {
-width: 75%;
 margin: 0 auto;
 padding-bottom:10px;
+width: 75%;
 }
 
 .comment-text span {
@@ -174,6 +174,24 @@ padding-bottom:10px;
 
 .like-posts:hover {
   border-bottom: 1px solid black;
+}
+
+.comments-area {
+  display: none;
+}
+
+.comments-area-open {
+  display: block;
+}
+
+.comment-count {
+  opacity: 0.6;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.comment-count:hover {
+  opacity: 0.3;
 }
 
 @media (max-width: 730px) {

@@ -1,5 +1,16 @@
-## usersテーブル
+## アプリケーション名
+KIREI
 
+## アプリケーション概要
+
+
+
+
+
+
+
+
+## usersテーブル
 |Column             |Type   |Options                  |
 |-------------------|-------|-------------------------|
 |nickname           |string |null: false              |
@@ -101,5 +112,3 @@
 ## Association
 - belongs_to :user
 - belongs_to :room
-
-
