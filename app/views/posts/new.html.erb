@@ -1,3 +1,4 @@
+<%= javascript_pack_tag 'home/preview' %>
 <%= render "shared/header" %>
 <div id="container">
   <div class="fix"></div>
@@ -7,6 +8,7 @@
       <%= render 'shared/error_messages', model: f.object %>
       <div class="image-post">
         <%= f.file_field :image, class: "file-post" %>
+        <div id="image-list"></div>
       </div>
       <div class="caption-post">
         <%= f.text_area :caption, class:"text-post", placeholder:"投稿するアイテムの口コミを書こう!" ,rows:"7" ,maxlength:"1000", wrap:"soft" %>
