@@ -1,9 +1,9 @@
 <%= render "shared/header" %>
 <% breadcrumb :ranking %>
 <div id="container">
-  <div class=rankings>
-    <div class="rankig-posts">
-      <div class="ranking-post">
+  <div class="rankings">
+    <h1 class="ranking-logo">いいね！ランキング</h1>
+    <div class="ranking-post">
       <% if @posts[0].present? %>
         <div class="top-ranking-post">
           <p>いいね！数ランキング １位</p>
@@ -27,9 +27,10 @@
           <hr>
           <p><%= "アイテムカテゴリー : #{@posts[0].category.name}"%></p>
         </div>
-        <% end %>
-
-        <% if @posts[1].present? %>
+      <% end %>
+    </div>
+    <div class="ranking-post">
+      <% if @posts[1].present? %>
         <div class="top-ranking-post">
           <p>いいね！数ランキング 2位</p>
           <%= link_to "投稿者 #{@posts[1].user.nickname}", user_path(@posts[1].user.id), class:"user-name-ranking" %>
@@ -52,9 +53,10 @@
           <hr>
           <p><%= "アイテムカテゴリー : #{@posts[1].category.name}"%></p>
         </div>
-        <% end %>
-
-        <% if @posts[2].present? %>
+      <% end %>
+    </div>
+    <div class="ranking-post">
+      <% if @posts[2].present? %>
         <div class="top-ranking-post">
           <p>いいね！数ランキング 3位</p>
           <%= link_to "投稿者 #{@posts[2].user.nickname}", user_path(@posts[2].user.id), class:"user-name-ranking" %>
@@ -77,14 +79,12 @@
           <hr>
           <p><%= "アイテムカテゴリー : #{@posts[2].category.name}"%></p>
         </div>
-        <% end %>
-
-        <% unless @posts.present? %>
-          <h1 class="no-post">いいね！された投稿がないのでランキングは表示されません<h1>
-        <% end %>
-      </div>
-    <div>
+      <% end %>
+    </div>
+      <% unless @posts.present? %>
+        <h1 class="no-post">いいね！された投稿がないのでランキングは表示されません<h1>
+      <% end %>
   </div>
-
-  <%= render "shared/footer" %>
 </div>
+
+<%= render "shared/footer" %>

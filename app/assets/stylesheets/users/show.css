@@ -50,8 +50,10 @@
   font-size: 55px;
   letter-spacing: 3px;
   opacity: 0.7;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   font-family: 'Caveat', cursive;
+  text-shadow: 2px 2px 10px black;
+
 }
 
 .mypage-follow {
