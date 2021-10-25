@@ -245,9 +245,6 @@ header {
   0% {
     width: 50px;
   }
-  50% {
-    width: 50%;
-  }
   100% {
     width: 100%;
   }
