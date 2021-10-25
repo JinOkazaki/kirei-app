@@ -49,7 +49,7 @@
         <% end %>
       </div>
       <% if @comments.present? %>
-        <p class="comment-count"><%= "コメント#{@comments.count}件全てを表示" %></p>
+        <p class="comment-count" id="comment-count"><%= "コメント#{@comments.count}件全てを表示" %></p>
       <% end %>
     </div>
   <% else %>

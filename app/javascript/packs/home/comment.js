@@ -15,6 +15,7 @@ function post (){
       const formText = document.getElementById("text");
       const item = XHR.response.comment;
       const user = XHR.response.user;
+      const commentCount = XHR.response.comment_count;
       if (item.text == "") {
         alert("コメントを入力してください!");
       }
@@ -31,6 +32,8 @@ function post (){
        `;
       list.insertAdjacentHTML("afterbegin",html);
       formText.value = "";
+      const countArea = document.getElementById('comment-count');
+      countArea.innerHTML = `コメント${commentCount}件全てを表示`;
       };
     };
   });
@@ -44,7 +47,7 @@ function post (){
   $('.comment-count').on('click', function(){
     $('.comments-area').toggleClass('comments-area-open');
   });
-  
+
 };
 
 window.addEventListener('load', post);

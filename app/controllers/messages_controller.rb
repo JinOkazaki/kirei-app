@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
   def create
     if  Entry.exists?(user: current_user, room_id: params[:message][:room_id])
-      @message = Message.create(message_params)
+      @message = Message.create(message_params.merge(user_id: current_user.id))
       ActionCable.server.broadcast "message_channel", message: @message
     else
       redirect_to room_path(@message.room_id)
@@ -12,6 +12,6 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:user_id, :message, :room_id).merge(user_id: current_user.id)
+    params.require(:message).permit(:user_id, :message, :room_id)
   end
 end

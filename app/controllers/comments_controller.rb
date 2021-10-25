@@ -1,9 +1,10 @@
 class CommentsController < ApplicationController
 
   def create
-    comment = Comment.create(comment_params)
+    comment = Comment.create(comment_params.merge(user_id: current_user.id, post_id: params[:post_id]))
     user = comment.user
-    render json:{comment: comment, user: user}
+    comment_count = Post.find(params[:post_id]).comments.count
+    render json:{comment: comment, user: user, comment_count: comment_count}
   end
 
   def destroy
@@ -15,6 +16,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:text).merge(user_id: current_user.id, post_id: params[:post_id])
+    params.require(:comment).permit(:text)
   end
 end
