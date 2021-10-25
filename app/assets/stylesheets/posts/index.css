@@ -133,21 +133,21 @@ hr {
 
 @media (max-width: 430px) {
   .top-post {
-    width: 40vh;
+    width: 37vh;
   }
   .main-post {
-    width: 40vh;
-    height: 50vh;
+    width: 37vh;
+    height: 47vh;
   }
   .footer-post {
-    width: 40vh;
+    width: 37vh;
   }
   .image-main-post {
-    width: 38vh;
-    height: 50vh;
+    width: 35vh;
+    height: 47vh;
   }
   .link-image {
-    width: 38vh;
-    height: 50vh;
+    width: 35vh;
+    height: 47vh;
   }
 }

@@ -32,6 +32,10 @@ header {
 
 .hum-kirei {
   font-weight: bold;
+  width: 280px;
+  display: block; 
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .hum-kirei:hover {
@@ -56,6 +60,10 @@ header {
 
 .hum-ranking {
   font-weight: bold;
+  width: 280px;
+  display: block; 
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .hum-ranking:hover {
@@ -80,6 +88,10 @@ header {
 
 .hum-my-page {
   font-weight: bold;
+  width: 280px;
+  display: block; 
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .hum-my-page:hover {
@@ -104,6 +116,10 @@ header {
 
 .hum-logout {
   font-weight: bold;
+  width: 280px;
+  display: block; 
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .hum-logout:hover {
@@ -128,6 +144,10 @@ header {
 
 .hum-login {
   font-weight: bold;
+  width: 280px;
+  display: block; 
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .hum-login:hover {
@@ -152,6 +172,10 @@ header {
 
 .hum-signup {
   font-weight: bold;
+  width: 280px;
+  display: block; 
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .hum-signup:hover {
@@ -196,7 +220,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 45px;
+  padding-top: 30px;
 }
 
 .menus li {
@@ -207,6 +231,10 @@ header {
 
 .hum-user-show-chat {
   font-weight: bold;
+  width: 280px;
+  display: block; 
+  text-align: center;
+  border-bottom: 1px solid black;
 }
 
 .hum-user-show-chat:hover {
