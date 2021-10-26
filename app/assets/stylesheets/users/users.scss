@@ -1,0 +1,22 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mypage-posts {
+  background-image: image-url('kirei-index.jpg');
+  background-repeat:  no-repeat;
+  background-position:top;
+  background-size:cover;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.follows {
+  padding: 20px 0 40px 0;
+  height: 100vh;
+  background-image: image-url('kirei-index.jpg');
+  background-repeat:  no-repeat;
+  background-position:top;
+  background-size:cover;
+}
+

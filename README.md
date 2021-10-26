@@ -53,7 +53,7 @@ URL: 35.76.224.126
 * 他ユーザーのマイページにあるフォローボタンを押すとフォロー、フォローの取り消しができます。  
 * 他ユーザーのマイページにあるチャットボタンを押すとチャットができます。  
 ### レスポンシブ対応  
-[![Image from Gyazo](https://i.gyazo.com/4a276cec98bf1d3e638a47dc55637b8a.gif)](https://gyazo.com/4a276cec98bf1d3e638a47dc55637b8a)  
+[![Image from Gyazo](https://i.gyazo.com/4f812e17f5f65f0f87df685dff3d0da9.gif)](https://gyazo.com/4f812e17f5f65f0f87df685dff3d0da9)  
 * 画面サイズによってヘッダーのメニューをハンバーガメニューにまとめました。  
 ## 工夫したポイント
 * 実際の開発現場を想定し機能ごとにブランチを切りプッシュも作業ごとに実施しました。

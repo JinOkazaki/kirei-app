@@ -27,9 +27,9 @@ RSpec.describe User, type: :model do
           expect(@user.errors.full_messages).to include("年齢は半角数字で入力してください")
         end
         it '性別で---を選択すると登録できない' do
-          @user.gender_id = 1
+          @user.gender_id = ""
           @user.valid?
-          expect(@user.errors.full_messages).to include("性別を選んでください")
+          expect(@user.errors.full_messages).to include("性別を入力してください")
         end
         it 'メールアドレスが空だと登録できない' do
           @user.email = ''
