@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </head>
 
   <body>
-      <%= breadcrumbs separator: " &rsaquo; " %>
-      <%= yield %>
+        <%= breadcrumbs separator: " &rsaquo; " %>
+        <%= yield %>
+        <%# <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> %>
+        <%= javascript_pack_tag 'home/particles' %>
   </body>
 </html>

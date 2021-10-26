@@ -75,3 +75,4 @@ gem "aws-sdk-s3", require: false
 gem 'rails-i18n'
 gem "gretel"
 gem 'faker'
+gem 'particles-js-rails', '2.0.0'
