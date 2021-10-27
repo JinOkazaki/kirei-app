@@ -11,9 +11,9 @@ URL: 35.76.224.126
 - 市場状況
 2021年 20～59歳の男性1373名を対象
 [![Image from Gyazo](https://i.gyazo.com/48a5fb2cef70c679c1f8210d3c045310.png)](https://gyazo.com/48a5fb2cef70c679c1f8210d3c045310)  
-体で52.2%の男性が、10~20代に絞ると約7割の男性が美容に興味がある。
+全体でで52.2%、10~20代に絞ると約7割の男性が美容に興味がある。
 30~50代の男性でも45.2%の男性が美容に興味があるとデータに出ています。
-このように年々、メンズ美容市場は高まっています。  
+このようにメンズ美容市場は高まっています。  
 - 市場課題  
 [![Image from Gyazo](https://i.gyazo.com/f716aefabbe0ddc5bd4ac3c5385827e1.jpg)](https://gyazo.com/f716aefabbe0ddc5bd4ac3c5385827e1)  
 #### 誰に聞けば良いのか分からない  
@@ -48,7 +48,7 @@ URL: 35.76.224.126
   * 他ユーザーの詳細ページには編集、削除ボタンは表示されません。  
 * 投稿にコメントができます。  
 ### マイページ  
-[![Image from Gyazo](https://i.gyazo.com/70e057801e8a78550bb9cf5144a86eb8.gif)](https://gyazo.com/70e057801e8a78550bb9cf5144a86eb8)[![Image from Gyazo](https://i.gyazo.com/e3999a1453b0b483f606ffccb08fa583.gif)](https://gyazo.com/e3999a1453b0b483f606ffccb08fa583)[![Image from Gyazo](https://i.gyazo.com/ca4a7e6f545002afbf4652295b4646de.gif)](https://gyazo.com/ca4a7e6f545002afbf4652295b4646de)  
+[![Image from Gyazo](https://i.gyazo.com/70e057801e8a78550bb9cf5144a86eb8.gif)](https://gyazo.com/70e057801e8a78550bb9cf5144a86eb8)  [![Image from Gyazo](https://i.gyazo.com/e3999a1453b0b483f606ffccb08fa583.gif)](https://gyazo.com/e3999a1453b0b483f606ffccb08fa583)  [![Image from Gyazo](https://i.gyazo.com/ca4a7e6f545002afbf4652295b4646de.gif)](https://gyazo.com/ca4a7e6f545002afbf4652295b4646de)  
 * ヘッダーのメニューにあるマイページをクリックするとマイページに遷移できます。  
 * 自分の投稿の一覧を見ることができます。  
 * 自分がいいねした投稿の一覧を見ることができます。
