@@ -52,7 +52,7 @@ URL:http://35.76.224.126
   * 他ユーザーの詳細ページには編集、削除ボタンは表示されません。  
 * 投稿にコメントができます。  
 ### マイページ  
-[![Image from Gyazo](https://i.gyazo.com/70e057801e8a78550bb9cf5144a86eb8.gif)](https://gyazo.com/70e057801e8a78550bb9cf5144a86eb8)  
+![70e057801e8a78550bb9cf5144a86eb8](https://user-images.githubusercontent.com/89967312/139038277-e333f96b-69de-4803-b3e8-b13ecb2af823.gif)  
 [![Image from Gyazo](https://i.gyazo.com/e3999a1453b0b483f606ffccb08fa583.gif)](https://gyazo.com/e3999a1453b0b483f606ffccb08fa583)  
 [![Image from Gyazo](https://i.gyazo.com/ca4a7e6f545002afbf4652295b4646de.gif)](https://gyazo.com/ca4a7e6f545002afbf4652295b4646de)  
 * ヘッダーのメニューにあるマイページをクリックするとマイページに遷移できます。  
