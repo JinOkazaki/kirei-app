@@ -27,7 +27,8 @@ URL:http://35.76.224.126
 ユーザーがした投稿を見る事で、投稿で気になったものがあったら直接ユーザーへチャット機能を使って聞く事ができることで迷子状態から抜け出せる事ができます。
 ## DEMO
 ### 新規登録画面  
-[![Image from Gyazo](https://i.gyazo.com/47f735e57a316c925c101ab2569b0348.gif)](https://gyazo.com/47f735e57a316c925c101ab2569b0348)  
+![d95da1e7741d32fd0948b7c5c0260ec7](https://user-images.githubusercontent.com/89967312/139037820-cbef208c-0f07-4afd-822e-04f2a69af040.gif)  
+
 * 適切な情報を入力することで新規登録ができます。
 * ログインしてないとできない事  
   * 新規投稿
@@ -38,7 +39,7 @@ URL:http://35.76.224.126
   * ユーザーマイページへの遷移 
 
 ### トップページ(投稿一覧画面)　　
-![106e626f66aee8e24f4e6bab0878805b](https://user-images.githubusercontent.com/89967312/139036806-2633e7e6-10f4-4ab5-95b9-f88c80e09d96.gif)  
+![867cfc6a57895467184975dfb7059eba](https://user-images.githubusercontent.com/89967312/139037491-3cf10da1-d627-450b-af80-6ef40b028978.gif)  
 
 * トップページから投稿の一覧を見ることができます。  
 * 投稿についているハート型のボタンを押すといいねができます。  
@@ -69,7 +70,8 @@ URL:http://35.76.224.126
 * 他ユーザーのマイページにあるチャットボタンを押すとチャットができます。  
 ### レスポンシブ対応  
 
-[![Image from Gyazo](https://i.gyazo.com/4f812e17f5f65f0f87df685dff3d0da9.gif)](https://gyazo.com/4f812e17f5f65f0f87df685dff3d0da9)  
+![106e626f66aee8e24f4e6bab0878805b](https://user-images.githubusercontent.com/89967312/139036806-2633e7e6-10f4-4ab5-95b9-f88c80e09d96.gif)  
+
 
 * 画面サイズによってヘッダーのメニューをハンバーガメニューにまとめました。  
 ## 工夫したポイント
