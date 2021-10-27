@@ -5,7 +5,7 @@ KIREI
 10~40代の学生から会社勤めの男性をターゲットにした男性向けの美容情報共有サービスです。 おすすめ商品、お気に入り商品を画像付きで投稿することができてユーザーが情報を共有することができます。 
 
 ## 本番環境
-URL: 35.76.224.126
+URL:http://35.76.224.126
 
 ## 制作背景
 - 市場状況
@@ -13,16 +13,18 @@ URL: 35.76.224.126
 [![Image from Gyazo](https://i.gyazo.com/48a5fb2cef70c679c1f8210d3c045310.png)](https://gyazo.com/48a5fb2cef70c679c1f8210d3c045310)  
 全体で52.2%、10〜20代に絞ると約7割の男性が美容に興味がある。
 30〜50代の男性でも45.2%の男性が美容に興味があるとデータに出ています。
-このようにメンズ美容市場は高まっています。  
+このようにメンズ美容市場は高まっています。 
+
 - 市場課題  
+  #### 誰に聞けば良いのか分からない  
+  #### 何をどうしたら良いのか分からない  
+
 [![Image from Gyazo](https://i.gyazo.com/f716aefabbe0ddc5bd4ac3c5385827e1.jpg)](https://gyazo.com/f716aefabbe0ddc5bd4ac3c5385827e1)  
-#### 誰に聞けば良いのか分からない  
-#### 何をどうしたら良いのか分からない  
+
 このように美容に関心のある男性はどんなサービスを頼って良いのか分からず、迷子状態にある事が課題だと思いました。  
   
 そこで、これらの課題を解決できる男性向け美容情報共有アプリケーションを開発しました。  
 ユーザーがした投稿を見る事で、投稿で気になったものがあったら直接ユーザーへチャット機能を使って聞く事ができることで迷子状態から抜け出せる事ができます。
-
 ## DEMO
 ### 新規登録画面  
 [![Image from Gyazo](https://i.gyazo.com/47f735e57a316c925c101ab2569b0348.gif)](https://gyazo.com/47f735e57a316c925c101ab2569b0348)  
@@ -48,7 +50,9 @@ URL: 35.76.224.126
   * 他ユーザーの詳細ページには編集、削除ボタンは表示されません。  
 * 投稿にコメントができます。  
 ### マイページ  
-[![Image from Gyazo](https://i.gyazo.com/70e057801e8a78550bb9cf5144a86eb8.gif)](https://gyazo.com/70e057801e8a78550bb9cf5144a86eb8)  [![Image from Gyazo](https://i.gyazo.com/e3999a1453b0b483f606ffccb08fa583.gif)](https://gyazo.com/e3999a1453b0b483f606ffccb08fa583)  [![Image from Gyazo](https://i.gyazo.com/ca4a7e6f545002afbf4652295b4646de.gif)](https://gyazo.com/ca4a7e6f545002afbf4652295b4646de)  
+[![Image from Gyazo](https://i.gyazo.com/70e057801e8a78550bb9cf5144a86eb8.gif)](https://gyazo.com/70e057801e8a78550bb9cf5144a86eb8)  
+[![Image from Gyazo](https://i.gyazo.com/e3999a1453b0b483f606ffccb08fa583.gif)](https://gyazo.com/e3999a1453b0b483f606ffccb08fa583)  
+[![Image from Gyazo](https://i.gyazo.com/ca4a7e6f545002afbf4652295b4646de.gif)](https://gyazo.com/ca4a7e6f545002afbf4652295b4646de)  
 * ヘッダーのメニューにあるマイページをクリックするとマイページに遷移できます。  
 * 自分の投稿の一覧を見ることができます。  
 * 自分がいいねした投稿の一覧を見ることができます。
@@ -56,18 +60,22 @@ URL: 35.76.224.126
 * フォロワー一覧を見ることができます。
 * 自分がチャットをした事があるユーザーの一覧を見る事ができます。  
 ### 他ユーザーのマイページ  
-[![Image from Gyazo](https://i.gyazo.com/7d7714e4c4e3e0c0b21701d0eeb6c6c1.gif)](https://gyazo.com/7d7714e4c4e3e0c0b21701d0eeb6c6c1)[![Image from Gyazo](https://i.gyazo.com/f68592c3c9a520950a832d84259a25d8.gif)](https://gyazo.com/f68592c3c9a520950a832d84259a25d8)  
+[![Image from Gyazo](https://i.gyazo.com/7d7714e4c4e3e0c0b21701d0eeb6c6c1.gif)](https://gyazo.com/7d7714e4c4e3e0c0b21701d0eeb6c6c1)  
+[![Image from Gyazo](https://i.gyazo.com/f68592c3c9a520950a832d84259a25d8.gif)](https://gyazo.com/f68592c3c9a520950a832d84259a25d8)  
 * ユーザーの投稿一覧を見ることができます。  
 * ユーザーがいいねした投稿の一覧を見ることができます。  
 * 他ユーザーのマイページにあるフォローボタンを押すとフォロー、フォローの取り消しができます。  
 * 他ユーザーのマイページにあるチャットボタンを押すとチャットができます。  
 ### レスポンシブ対応  
+
 [![Image from Gyazo](https://i.gyazo.com/4f812e17f5f65f0f87df685dff3d0da9.gif)](https://gyazo.com/4f812e17f5f65f0f87df685dff3d0da9)  
+
 * 画面サイズによってヘッダーのメニューをハンバーガメニューにまとめました。  
 ## 工夫したポイント
 * 実際の開発現場を想定し機能ごとにブランチを切りプッシュも作業ごとに実施しました。
 * Ajaxを用いた実装をなるべくしてアプリケーションのパフォーマンスを向上させました。
 * 各端末でも利用できるようレスポンシブ対応にしました。  
+* 男性が使っていても違和感がない、かつオシャレなデザインになるように心がけました。
 ## 使用技術(開発環境)
 ### バックエンド  
 Ruby, Ruby on Rails  
