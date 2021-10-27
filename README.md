@@ -37,8 +37,8 @@ URL:http://35.76.224.126
   * チャット機能  
   * ユーザーマイページへの遷移 
 
-### トップページ(投稿一覧画面)  
-[![Image from Gyazo](https://i.gyazo.com/933d52e2e51edb988ff9cdd2a1503a18.gif)](https://gyazo.com/933d52e2e51edb988ff9cdd2a1503a18)  
+### トップページ(投稿一覧画面)　　
+[![Image from Gyazo](https://i.gyazo.com/d5f50aa86c10a84bdc3318a44408f0ab.gif)](https://gyazo.com/d5f50aa86c10a84bdc3318a44408f0ab)  
 
 * トップページから投稿の一覧を見ることができます。  
 * 投稿についているハート型のボタンを押すといいねができます。  
