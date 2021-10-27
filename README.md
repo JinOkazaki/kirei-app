@@ -38,7 +38,7 @@ URL:http://35.76.224.126
   * ユーザーマイページへの遷移 
 
 ### トップページ(投稿一覧画面)　　
-[![Image from Gyazo](https://i.gyazo.com/d5f50aa86c10a84bdc3318a44408f0ab.gif)](https://gyazo.com/d5f50aa86c10a84bdc3318a44408f0ab)  
+![106e626f66aee8e24f4e6bab0878805b](https://user-images.githubusercontent.com/89967312/139036806-2633e7e6-10f4-4ab5-95b9-f88c80e09d96.gif)  
 
 * トップページから投稿の一覧を見ることができます。  
 * 投稿についているハート型のボタンを押すといいねができます。  
