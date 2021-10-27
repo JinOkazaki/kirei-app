@@ -33,7 +33,7 @@
 
 .top-ranking-post {
   height: 60px;
-  width: 100vh;
+  width: 80vh;
   background-color:rgba(242, 245, 248, 0.9);
   display: flex;
   justify-content: space-between;
@@ -53,7 +53,7 @@
 }
 
 .main-ranking-post {
-  width: 100vh;
+  width: 80vh;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -76,36 +76,36 @@
 }
 
 .link-ranking {
-  height: 65vh;
-  width: 98vh;
+  height: 45vh;
+  width: 78vh;
 }
 
 .image-ranking-post {
-  height: 65vh;
-  width: 98vh;
+  height: 45vh;
+  width: 78vh;
 }
 
 .footer-ranking-post {
-  width: 100vh;
+  width: 80vh;
   background-color: rgba(245, 245, 248, 0.9);
   padding: 10px;
 }
 
 @media (max-width: 1024px) {
   .top-ranking-post {
-    width: 75vh;
+    width: 70vh;
   }
   .main-ranking-post {
-    width: 75vh;
+    width: 70vh;
   }
   .footer-ranking-post {
-    width: 75vh;
+    width: 70vh;
   }
   .image-ranking-post {
-    width: 73vh;
+    width: 68vh;
   }
   .link-ranking {
-    width: 73vh;
+    width: 68vh;
   }
   .ranking-icon {
     right: 410px;
@@ -113,9 +113,6 @@
   .ranking-logo {
     font-size: 40px;
   }
-}
-
-@media (max-width: 550px) {
   .footer-ranking-post p {
     font-size: 13px;
   }
@@ -131,23 +128,23 @@
   .footer-ranking-post p {
     font-size: 13px;
   }
+}
+
+@media (max-width: 550px) {
   .top-ranking-post {
     width: 60vh;
   }
   .main-ranking-post {
     width: 60vh;
-    height: 58vh;
   }
   .footer-ranking-post {
     width: 60vh;
   }
   .image-ranking-post {
     width: 58vh;
-    height: 58vh;
   }
   .link-ranking {
     width: 58vh;
-    height: 58vh;
   }
   .ranking-icon {
     left: 10px;

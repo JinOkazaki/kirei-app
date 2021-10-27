@@ -1,5 +1,4 @@
 
-
 .post {
   display: flex;
   flex-direction: column;
@@ -10,7 +9,7 @@
 
 .top-post {
   height: 60px;
-  width: 60vh;
+  width: 56vh;
   background-color:rgba(242, 245, 248, 0.9);
   display: flex;
   justify-content: space-between;
@@ -31,24 +30,24 @@
 }
 
 .main-post {
-  width: 60vh;
+  width: 56vh;
   background-color: white;
   display: flex;
   justify-content: center;
 }
 
 .image-main-post {
-  width:  52vh;
-  height: 49vh;
+  width:  48vh;
+  height: 45vh;
 }
 
 .link-image {
-  width: 52vh;
-  height: 49vh;
+  width: 48vh;
+  height: 45vh;
 }
 
 .footer-post {
-  width: 60vh;
+  width: 56vh;
   background-color: rgba(245, 245, 248, 0.9);
   padding: 10px;
 }
