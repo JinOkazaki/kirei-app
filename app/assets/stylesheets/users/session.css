@@ -1,6 +1,6 @@
 .sessions {
   height: calc(100vh - 60px);
-  padding-top: 100px;
+  padding-top: 130px;
   overflow: scroll;
 }
 
@@ -9,6 +9,11 @@
   font-size: 60px;
   font-family: 'Caveat', cursive;
   color: aliceblue;
+  margin-bottom: 30px;
+}
+
+.session-field {
+margin-bottom: 20px;
 }
 
 .login-btn {

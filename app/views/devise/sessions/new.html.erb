@@ -6,11 +6,11 @@
       <div class="registration">
         <%= form_with model: @user, url: user_session_path, class: "new-users", local: true do |f| %>
           <%= render "shared/error_messages", model: f.object %>
-          <div class="registration-field email-field">
+          <div class="registration-field email-field session-field">
             <%= f.label :email %>
             <%= f.email_field :email, placeholder: "例)kirei@kirei.com", class: "intext" %>
           </div>
-          <div class="registration-field">
+          <div class="registration-field session-field">
             <%= f.label :password %>
             <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> 文字以上) </em>
