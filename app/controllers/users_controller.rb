@@ -3,12 +3,12 @@ class UsersController < ApplicationController
   before_action :set_entry_room, only: [:show, :likes]
 
   def show
-    @posts = @user.posts.order("created_at DESC").page(params[:page]).per(2)
+    @posts = @user.posts.order("created_at DESC").page(params[:page]).per(9)
   end
 
   def likes
     likes = Like.where(user_id: @user.id).pluck(:post_id)
-    @like_posts = Post.where(id: likes).order("created_at DESC").page(params[:page]).per(2)
+    @like_posts = Post.where(id: likes).order("created_at DESC").page(params[:page]).per(9)
   end
 
   def followings
