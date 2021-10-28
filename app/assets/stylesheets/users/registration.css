@@ -1,5 +1,4 @@
 #particles-js {
-  /* background-color: rgb(113, 114, 117); */
   animation: bgchange 7s ease infinite;
   position: fixed;
 	z-index: -1;
@@ -8,7 +7,7 @@
 }
 
 @keyframes bgchange{
-  0%  {background:rgba(113, 114, 117);}
+  0%  {background:rgb(113, 114, 117);}
   25% {background:rgb(104, 106, 112);}
   50% {background:rgb(97, 102, 116);}
   75% {background:rgb(79, 87, 112);}
