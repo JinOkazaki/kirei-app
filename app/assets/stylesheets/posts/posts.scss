@@ -55,3 +55,15 @@
   background-size:cover;
 }
 
+@media (max-width: 730px) {
+  .wrapper {
+    height: 470px;
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    height: 390px;
+  }
+}
+
