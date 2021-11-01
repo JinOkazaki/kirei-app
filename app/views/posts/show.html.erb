@@ -12,7 +12,7 @@
         <div class="trash-edit">
           <% if user_signed_in? && current_user.id == @post.user_id %>
             <div class="trash">
-              <%= link_to(post_path(@post.id), method: :delete, class:"fa fa-trash fa-3x trash-btn", style: "display: flex;" ) do%>
+              <%= link_to(post_path(@post.id), method: :delete, class:"fa fa-trash fa-3x trash-btn", style: "display: flex;", data: { confirm: "本当に削除しますか？" } ) do%>
               <% end %>
             </div>
             <div class="edit">
