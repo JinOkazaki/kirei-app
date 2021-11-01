@@ -43,10 +43,12 @@ URL:http://35.76.224.126
 
 ### トップページ(投稿一覧画面)　　
 ![867cfc6a57895467184975dfb7059eba](https://user-images.githubusercontent.com/89967312/139037491-3cf10da1-d627-450b-af80-6ef40b028978.gif)  
+![947fec2e6896feea0748da763a345155](https://user-images.githubusercontent.com/89967312/139612560-ccc9fb52-8081-4a41-ba22-849f860ec357.gif)  
 
 * トップページから投稿の一覧を見ることができます。  
 * 投稿についているハート型のボタンを押すといいねができます。  
 * 投稿者をクリックするとそのユーザーのマイページに遷移できます。  
+* カテゴリー検索ができます。  
 
 ### 投稿詳細ページ  
 [![Image from Gyazo](https://i.gyazo.com/1fbb4f8bae025c51e1d57f1e6180dab3.gif)](https://gyazo.com/1fbb4f8bae025c51e1d57f1e6180dab3)  
