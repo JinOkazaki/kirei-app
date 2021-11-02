@@ -40,9 +40,9 @@ URL:http://35.76.224.126
   * フォロー機能  
   * チャット機能  
   * ユーザーマイページへの遷移 
-
-### トップページ(投稿一覧画面)　　
-![867cfc6a57895467184975dfb7059eba](https://user-images.githubusercontent.com/89967312/139037491-3cf10da1-d627-450b-af80-6ef40b028978.gif)  
+### トップページ(投稿一覧画面)  
+![cc6a8d67a7b07e18a5f7e9be3a2a7345](https://user-images.githubusercontent.com/89967312/
+139773542-73f487ad-df6a-47d3-85b5-bd287a2dd6bf.gif)  
 ![947fec2e6896feea0748da763a345155](https://user-images.githubusercontent.com/89967312/139612560-ccc9fb52-8081-4a41-ba22-849f860ec357.gif)  
 
 * トップページから投稿の一覧を見ることができます。  
