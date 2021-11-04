@@ -37,12 +37,12 @@
 }
 
 .image-main-post {
-  width:  48vh;
+  width:  56vh;
   height: 45vh;
 }
 
 .link-image {
-  width: 48vh;
+  width: 56vh;
   height: 45vh;
 }
 
@@ -136,17 +136,17 @@ hr {
   }
   .main-post {
     width: 37vh;
-    height: 47vh;
+    height: 35vh;
   }
   .footer-post {
     width: 37vh;
   }
   .image-main-post {
-    width: 35vh;
-    height: 47vh;
+    width: 37vh;
+    height: 35vh;
   }
   .link-image {
-    width: 35vh;
-    height: 47vh;
+    width: 37vh;
+    height: 35vh;
   }
 }

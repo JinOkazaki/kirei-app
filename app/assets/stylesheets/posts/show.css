@@ -29,12 +29,12 @@
 }
 
 .image-main-show {
-  width: 98vh;
+  width: 100vh;
   height: 65vh;
 }
 
 .show-link {
-  width: 98vh;
+  width: 100vh;
   height: 65vh;
 }
 
@@ -211,10 +211,10 @@ width: 75%;
     width: 75vh;
   }
   .image-main-show {
-    width: 73vh;
+    width: 75vh;
   }
   .show-link {
-    width: 73vh;
+    width: 75vh;
   }
 }
 
@@ -224,18 +224,18 @@ width: 75%;
   }
   .main-show {
     width: 60vh;
-    height: 58vh;
+    height: 50vh;
   }
   .footer-show {
     width: 60vh;
   }
   .image-main-show {
-    width: 58vh;
-    height: 58vh;
+    width: 60vh;
+    height: 50vh;
   }
   .show-link {
-    width: 58vh;
-    height: 58vh;
+    width: 60vh;
+    height: 50vh;
   }
   .edit {
     top: 47.5vh;
@@ -260,18 +260,18 @@ width: 75%;
   }
   .main-show {
     width: 40vh;
-    height: 50vh;
+    height: 38vh;
   }
   .footer-show {
     width: 40vh;
   }
   .image-main-show {
-    width: 38vh;
-    height: 50vh;
+    width: 40vh;
+    height: 38vh;
   }
   .show-link {
-    width: 38vh;
-    height: 50vh;
+    width: 40vh;
+    height: 38vh;
   }
   .edit {
     top: 40vh;;

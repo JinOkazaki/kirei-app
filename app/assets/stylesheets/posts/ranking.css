@@ -76,13 +76,13 @@
 }
 
 .link-ranking {
-  height: 45vh;
-  width: 78vh;
+  height: 55vh;
+  width: 80vh;
 }
 
 .image-ranking-post {
-  height: 45vh;
-  width: 78vh;
+  height: 55vh;
+  width: 80vh;
 }
 
 .footer-ranking-post {
@@ -102,10 +102,10 @@
     width: 70vh;
   }
   .image-ranking-post {
-    width: 68vh;
+    width: 70vh;
   }
   .link-ranking {
-    width: 68vh;
+    width: 70vh;
   }
   .ranking-icon {
     right: 410px;
@@ -141,10 +141,12 @@
     width: 60vh;
   }
   .image-ranking-post {
-    width: 58vh;
+    width: 60vh;
+    height: 50vh;
   }
   .link-ranking {
-    width: 58vh;
+    width: 60vh;
+    height: 50vh;
   }
   .ranking-icon {
     left: 10px;
@@ -162,18 +164,18 @@
   }
   .main-ranking-post {
     width: 35vh;
-    height: 45vh;
+    height: 33vh;
   }
   .footer-ranking-post {
     width: 35vh;
   }
   .image-ranking-post {
-    width: 33vh;
-    height: 45vh;
+    width: 35vh;
+    height: 33vh;
   }
   .link-ranking {
-    width: 33vh;
-    height: 45vh;
+    width: 35vh;
+    height: 33vh;
   }
   .ranking-icon {
     height: 50px;

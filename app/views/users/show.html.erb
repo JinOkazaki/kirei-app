@@ -18,7 +18,7 @@
               <%= fields_for @entry do |e| %>
                 <%= e.hidden_field :user_id, value: @user.id %>
               <% end %>
-              <%= f.submit "チャット", class:"btn btn-primary btn-lg user-show-chat"%>
+              <%= f.submit "チャット", class:"btn btn-primary btn-lg user-show-chat", data: { confirm: "ルームを新規作成しチャットをしますか？" }%>
             <% end %>
           <% end %>
           <%# <% end %> 
