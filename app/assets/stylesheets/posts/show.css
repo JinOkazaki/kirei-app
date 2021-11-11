@@ -13,7 +13,7 @@
 
 .top-show {
   height: 60px;
-  width: 100vh;
+  width: 80vh;
   background-color:rgba(242, 245, 248, 0.9);
   display: flex;
   justify-content: space-between;
@@ -22,24 +22,24 @@
 }
 
 .main-show {
-  width: 100vh;
+  width: 80vh;
   background-color: white;
   display: flex;
   justify-content: center;
 }
 
 .image-main-show {
-  width: 100vh;
+  width: 80vh;
   height: 65vh;
 }
 
 .show-link {
-  width: 100vh;
+  width: 80vh;
   height: 65vh;
 }
 
 .footer-show {
-  width: 100vh;
+  width: 80vh;
   background-color: rgba(245, 245, 248, 0.9);
   padding: 10px;
 }
