@@ -76,12 +76,12 @@
 }
 
 .link-ranking {
-  height: 55vh;
+  height: 80vh;
   width: 80vh;
 }
 
 .image-ranking-post {
-  height: 55vh;
+  height: 80vh;
   width: 80vh;
 }
 
@@ -103,9 +103,11 @@
   }
   .image-ranking-post {
     width: 70vh;
+    height: 70vh;
   }
   .link-ranking {
     width: 70vh;
+    height: 70vh;
   }
   .ranking-icon {
     right: 410px;
@@ -142,11 +144,11 @@
   }
   .image-ranking-post {
     width: 60vh;
-    height: 50vh;
+    height: 60vh;
   }
   .link-ranking {
     width: 60vh;
-    height: 50vh;
+    height: 60vh;
   }
   .ranking-icon {
     left: 10px;

@@ -13,7 +13,7 @@
 
 .top-show {
   height: 60px;
-  width: 80vh;
+  width: 65vh;
   background-color:rgba(242, 245, 248, 0.9);
   display: flex;
   justify-content: space-between;
@@ -22,24 +22,24 @@
 }
 
 .main-show {
-  width: 80vh;
+  width: 65vh;
   background-color: white;
   display: flex;
   justify-content: center;
 }
 
 .image-main-show {
-  width: 80vh;
+  width: 65vh;
   height: 65vh;
 }
 
 .show-link {
-  width: 80vh;
+  width: 65vh;
   height: 65vh;
 }
 
 .footer-show {
-  width: 80vh;
+  width: 65vh;
   background-color: rgba(245, 245, 248, 0.9);
   padding: 10px;
 }
@@ -202,47 +202,38 @@ width: 75%;
 
 @media (max-width: 1024px) {
   .top-show {
-    width: 75vh;
+    width: 55vh;
   }
   .main-show {
-    width: 75vh;
+    width: 55vh;
+    height: 55vh;
   }
   .footer-show {
-    width: 75vh;
+    width: 55vh;
   }
   .image-main-show {
-    width: 75vh;
+    width: 55vh;
+    height: 55vh;
   }
   .show-link {
-    width: 75vh;
+    width: 55vh;
+    height: 55vh;
+  }
+  .edit {
+    top: 40.5vh;
+  }
+  .trash {
+    top: 40.5vh;
   }
 }
 
 @media (max-width: 550px) {
-  .top-show {
-    width: 60vh;
-  }
-  .main-show {
-    width: 60vh;
-    height: 50vh;
-  }
-  .footer-show {
-    width: 60vh;
-  }
-  .image-main-show {
-    width: 60vh;
-    height: 50vh;
-  }
-  .show-link {
-    width: 60vh;
-    height: 50vh;
-  }
   .edit {
-    top: 47.5vh;
+    top: 43.5vh;
     left: 12vh;
   }
   .trash {
-    top: 47.5vh;
+    top: 43.5vh;
   }
   .edit-btn {
     height: 9vh;
@@ -274,11 +265,11 @@ width: 75%;
     height: 38vh;
   }
   .edit {
-    top: 40vh;;
+    top: 27vh;;
     left: 10vh
   }
   .trash {
-    top: 40vh;
+    top: 27vh;
   }
 }
 
